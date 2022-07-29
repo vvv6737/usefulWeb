@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/mainLayout">
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <th:block layout:fragment="content">
+        <form>
+            <input th:value="${search == null ? '' : search}" name="search">
+            <button type="submit" id="sub">검색</button>
+        </form>
+        <p id="result" th:text="${result}" hidden></p>
+        <div id="newsResult"></div>
+
+        <textarea rows="10" cols="100" th:text="${userList[0].seq}"></textarea>
+
+    </th:block>
+
+    <script>
+        var newsMap = JSON.parse(document.querySelector('#result').textContent)
+        console.log(newsMap)
+        $.each(newsMap.items, function(i, item){
+            var a = `<div onclick="location.href = '${item.link}'"style="cursor: pointer;">${item.title}</div>`
+            $('#newsResult').append(a)
+        })
+    </script>
+</html>
