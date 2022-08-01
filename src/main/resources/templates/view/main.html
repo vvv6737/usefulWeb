@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/mainLayout">
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <th:block layout:fragment="content">
         <!-- Main -->
         <div id="main">
@@ -14,8 +13,10 @@
                     </div>
                     <div class="meta">
                         <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg"
-                                                                                          alt=""/></a>
+                        <a href="#" class="author">
+                            <span class="name">Jane Doe</span>
+                            <img src="images/avatar.jpg" alt=""/>
+                        </a>
                     </div>
                 </header>
                 <a href="single.html" class="image featured"><img src="images/pic01.jpg" alt=""/></a>

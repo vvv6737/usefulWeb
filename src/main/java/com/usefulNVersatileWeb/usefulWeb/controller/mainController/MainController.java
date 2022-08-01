@@ -31,8 +31,13 @@ public class MainController {
     private final static String SECRET = "u_sjmtAKb3";
 
     @GetMapping(value = "/mainView", name = "메인페이지")
-    public String mainView() throws Exception {
+    public String mainView(Model model) throws Exception {
         return WEB_PATH + "main";
+    }
+
+    @GetMapping(value = "/register", name = "게시판 입력 페이지")
+    public String register(Model model) throws Exception {
+        return WEB_PATH + "register";
     }
 
     @ResponseBody
