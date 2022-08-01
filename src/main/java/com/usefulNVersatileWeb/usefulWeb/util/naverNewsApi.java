@@ -1,35 +1,34 @@
 package com.usefulNVersatileWeb.usefulWeb.util;
 
+import lombok.SneakyThrows;
 import org.springframework.ui.ConcurrentModel;
 import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
 public class naverNewsApi {
-    // 베이스 URL
-    final String baseUrl = "https://openapi.naver.com/v1/search/news.json?query=";
 
+    private final static String BASEURL = "https://openapi.naver.com/v1/search/news.json?query=";
     private final static String ID = "DzXt1NqAAm0gzO4sSP1r";
     private final static String SECRET = "u_sjmtAKb3";
 
-    public String search(String clientId, String secret, String _url) {
+    @SneakyThrows
+    public String search(String searchData) {
         HttpURLConnection con = null;
         String result = "";
+        String _url = URLEncoder.encode(searchData, "UTF-8");
 
         try {
-            URL url = new URL(baseUrl + _url);
+            URL url = new URL(BASEURL + _url);
             con = (HttpURLConnection) url.openConnection();
 
             con.setRequestMethod("GET");
-            con.setRequestProperty("X-Naver-Client-Id", clientId);
-            con.setRequestProperty("X-Naver-Client-Secret", secret);
+            con.setRequestProperty("X-Naver-Client-Id", ID);
+            con.setRequestProperty("X-Naver-Client-Secret", SECRET);
 
             int responseCode = con.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) result = readBody(con.getInputStream());
@@ -42,7 +41,6 @@ public class naverNewsApi {
         }
         return result;
     }
-
 
     /**
      * 결과를 읽는다

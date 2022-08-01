@@ -3,8 +3,50 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.usefulNVersatileWeb.usefulWeb.mapper.UserMapper">
+
     <!--리스트 조회-->
     <select id="userInfo" parameterType="java.util.HashMap" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
         select * from userTable
+    </select>
+
+    <!--회원가입-->
+    <insert id="addUser" parameterType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo" useGeneratedKeys="true" keyProperty="seq">
+        INSERT INTO USER
+            (USER_ID,
+             USER_PASSWORD,
+             USER_NAME,
+             USER_ADD,
+             USER_PHONE1,
+             USER_PHONE2,
+             USER_PHONE3,
+             USER_EMAIL,
+             USER_REG_DATE)
+        VALUES
+            (#{userId},
+            #{userPassword},
+            #{userName},
+            #{userAdd},
+            #{userPNum1},
+            #{userPNum2},
+            #{userPNum3},
+            #{userEmail},
+            now())
+    </insert>
+
+    <!--로그인폼-->
+    <select id="loginForm" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
+        SELECT SEQ,
+               USER_ID,
+               USER_PASSWORD,
+               USER_NAME,
+               USER_ADD,
+               USER_PHONE1,
+               USER_PHONE2,
+               USER_PHONE3,
+               USER_EMAIL,
+               USER_REG_DATE,
+        FROM USER
+        WHERE USER_ID = #{userId}
+          AND USER_PASSWORD = #{userPassword}
     </select>
 </mapper>

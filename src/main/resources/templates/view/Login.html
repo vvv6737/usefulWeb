@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
+    <th:block layout:fragment="content">
+        <section>
+            <h3>Login</h3>
+            <form method="post" action="/loginForm">
+                <div class="row gtr-uniform">
+                    <div class="col-12 col-12-xsmall">
+                        <input type="text" name="userId" placeholder="ID">
+                    </div>
+                    <div class="col-12 col-12-xsmall">
+                        <input type="password" name="userPassword" placeholder="Password">
+                    </div>
+
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Login"></li>
+                            <li><input type="button" value="Sign Up" onclick="location.href='/signUp'"></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </th:block>
+</html>

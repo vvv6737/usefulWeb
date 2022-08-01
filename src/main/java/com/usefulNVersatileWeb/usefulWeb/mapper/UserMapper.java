@@ -7,5 +7,10 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
+
     List<UserVo> userInfo() throws Exception;
+
+    int addUser(UserVo userVo) throws Exception;
+
+    UserVo loginForm(UserVo userVO);
 }
