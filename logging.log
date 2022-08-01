@@ -1,0 +1,10 @@
+2022-08-01 09:29:38,072 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 11416 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-01 09:29:38,085 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-01 09:29:40,163 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-01 09:29:40,163 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-01 09:29:40,240 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-01 09:29:40,988 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 3.436 seconds (JVM running for 4.792)
+2022-08-01 09:29:49,247 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 09:29:49,285 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
+2022-08-01 09:29:49,643 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2022-08-01 09:29:50,108 WARN nz.net.ultraq.thymeleaf.expressionprocessor.ExpressionProcessor [http-nio-7777-exec-1] Fragment expression "layouts/mainLayout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.

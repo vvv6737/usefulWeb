@@ -26,9 +26,6 @@ public class MainController {
     @Autowired
     UserService userService;
 
-    @Autowired
-    com.usefulNVersatileWeb.usefulWeb.mapper.UserMapper userMapper;
-
     final static String WEB_PATH = "/view/";
     private final static String ID = "DzXt1NqAAm0gzO4sSP1r";
     private final static String SECRET = "u_sjmtAKb3";
@@ -36,33 +33,17 @@ public class MainController {
     @GetMapping(value = "/mainView", name = "메인페이지")
     public String mainView(Model model, HttpServletRequest req) throws Exception {
         model.addAttribute("userList", userService.userInfo());
-        try {
-            String search = req.getParameter("search");
-            String response = "검색 바랍니다.";
-            if(search != null) {
-                naverNewsApi crawler = new naverNewsApi();
-                String url = URLEncoder.encode(search, "UTF-8");
-                response = crawler.search(ID, SECRET, url);
-            }
-            model.addAttribute("result", response);
-            model.addAttribute("search", search);
-        } catch (Exception e) {
-            e.printStackTrace();
+        String search = req.getParameter("search");
+        String response = "검색 바랍니다.";
+        if(search != null) {
+            naverNewsApi crawler = new naverNewsApi();
+            String url = URLEncoder.encode(search, "UTF-8");
+            response = crawler.search(ID, SECRET, url);
         }
+        model.addAttribute("result", response);
+        model.addAttribute("search", search);
         return WEB_PATH + "main";
     }
-
-    //String -> HashMap으로 형변환시켜주는 메소드
-//    public HashMap<String, String> paramMap(Object obj) throws JSONException {
-//        HashMap<String, String> paramMap = new HashMap<String, String>();
-//        JSONObject json = new JSONObject(String.valueOf(obj));
-//        Iterator i = json.keys();
-//        while (i.hasNext()){
-//            String key = i.next().toString();
-//            paramMap.put(key, json.getString(key));
-//        }
-//        return paramMap;
-//    }
 
     @ResponseBody
     @PostMapping(value = "/naverNewsApi",  name = "네이버 뉴스 api")
