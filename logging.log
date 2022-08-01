@@ -8,3 +8,33 @@
 2022-08-01 09:29:49,285 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
 2022-08-01 09:29:49,643 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
 2022-08-01 09:29:50,108 WARN nz.net.ultraq.thymeleaf.expressionprocessor.ExpressionProcessor [http-nio-7777-exec-1] Fragment expression "layouts/mainLayout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+2022-08-01 09:58:26,139 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-01 09:58:26,147 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-01 09:58:30,366 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 11637 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-01 09:58:30,367 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-01 09:58:31,521 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-01 09:58:31,521 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-01 09:58:31,604 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-01 09:58:32,333 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 2.3 seconds (JVM running for 3.203)
+2022-08-01 09:58:35,715 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 09:58:36,130 WARN nz.net.ultraq.thymeleaf.expressionprocessor.ExpressionProcessor [http-nio-7777-exec-1] Fragment expression "layouts/mainLayout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+2022-08-01 10:06:57,851 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 11637 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-01 10:06:57,851 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-01 10:06:58,097 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-01 10:06:58,097 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-01 10:06:58,108 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-01 10:06:58,245 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.431 seconds (JVM running for 509.112)
+2022-08-01 10:07:19,113 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 11637 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-01 10:07:19,113 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-01 10:07:19,318 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-01 10:07:19,318 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-01 10:07:19,334 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-01 10:07:19,481 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.556 seconds (JVM running for 530.348)
+2022-08-01 10:08:15,450 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 10:11:52,639 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 11637 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-01 10:11:52,640 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-01 10:11:52,836 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-01 10:11:52,836 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-01 10:11:52,846 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-01 10:11:52,967 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.526 seconds (JVM running for 803.834)
+2022-08-01 10:11:56,191 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'

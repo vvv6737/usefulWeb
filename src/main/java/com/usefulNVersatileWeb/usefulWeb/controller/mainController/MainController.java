@@ -31,17 +31,7 @@ public class MainController {
     private final static String SECRET = "u_sjmtAKb3";
 
     @GetMapping(value = "/mainView", name = "메인페이지")
-    public String mainView(Model model, HttpServletRequest req) throws Exception {
-        model.addAttribute("userList", userService.userInfo());
-        String search = req.getParameter("search");
-        String response = "검색 바랍니다.";
-        if(search != null) {
-            naverNewsApi crawler = new naverNewsApi();
-            String url = URLEncoder.encode(search, "UTF-8");
-            response = crawler.search(ID, SECRET, url);
-        }
-        model.addAttribute("result", response);
-        model.addAttribute("search", search);
+    public String mainView() throws Exception {
         return WEB_PATH + "main";
     }
 
