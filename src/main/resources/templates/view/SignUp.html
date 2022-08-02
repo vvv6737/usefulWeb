@@ -1,6 +1,165 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
     <th:block layout:fragment="content">
+        <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+        <section>
+            <h3>Sign Up</h3>
+            <form id="signUpForm" onsubmit="return false">
 
+                <div class="row gtr-uniform">
+                    <div class="col-12 col-12-xsmall">
+                        <input type="text" name="userName" placeholder="Name">
+                    </div>
+                    <div class="col-9 col-12-xsmall">
+                        <input type="text" name="userId" placeholder="ID">
+                    </div>
+                    <div class="col-3 col-12-xsmall">
+                        <button type="button" class="button fit" id="idCheckBtn" onclick="isIdCheck()" th:disabled="${session.isIdCheck != null}">ID Check</button>
+                    </div>
+                    <div class="col-12 col-12-xsmall">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="col-12 col-12-xsmall">
+                        <input type="password" name="userPassword" placeholder="Password Again">
+                    </div>
+                    <div class="col-12 col-12-xsmall">
+                        <input type="email" name="userEmail" placeholder="Email">
+                    </div>
+
+                    <div class="col-12 col-12-xsmall">
+                        <h5>Phone Number</h5>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="userPNum1" placeholder="PhoneNum1" onkeypress='return checkNumber(event)' maxlength="3">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="userPNum2" placeholder="PhoneNum2" onkeypress='return checkNumber(event)' maxlength="4">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="userPNum3" placeholder="PhoneNum3" onkeypress='return checkNumber(event)' maxlength="4">
+                    </div>
+
+                    <div class="col-12 col-12-xsmall">
+                        <h5>Address</h5>
+                    </div>
+                    <div class="col-3 col-12-xsmall">
+                        <input type="text" name="zipCode" id="zipCode" placeholder="Zip code" readonly>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="address" id="address01" placeholder="Address" readonly>
+                    </div>
+                    <div class="col-3 col-12-xsmall">
+                        <ul class="actions fit">
+                            <li><a href="#" class="button fit" onclick="daumZipCode()">Zip Search</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-12-xsmall">
+                        <input type="text" name="detailAddress" id="address02" placeholder="Detailed Address">
+                    </div>
+
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Join" onclick="join()"></li>
+                            <li><input type="button" value="Login" onclick="location.href='/login'"></li>
+                            <p th:text="${msg}"></p>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <script>
+            //폰번호 입력칸숫자만 입력
+            function checkNumber(event) {
+                if(event.key === '.'
+                    || event.key === '-'
+                    || event.key >= 0 && event.key <= 9) {
+                    return true;
+                }
+                return false;
+            }
+
+            function daumZipCode() {
+                new daum.Postcode({
+                    oncomplete: function (data) {
+                        //팝업창에서 검색한 결과 중 항목을 클릭하였을 경우에
+                        //실행할 코드를 이곳에 작성한다.
+
+                        //각 주소의 노출 규칙에 따라 주소를 조합한다.
+                        //내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로,
+                        //이름 참고하여 분기한다.
+                        var fullAddr = '';	//최종 주소 변수
+                        var subAddr = ''; //조합형 주소 변수
+
+                        //사용자가 선택한 주소의 타입에 따라서 해당 주소값을 가져온다.
+                        if (data.userSelectedType == 'R') { //도로명 주소를 선택한 경우
+                            fullAddr = data.roadAddress;
+                        } else { //지번 주소를 선택한 경우
+                            fullAddr = data.jibunAddress;
+                        }
+
+                        //사용자가 선택한 주소가 도로명 타입일 때 조합한다.
+                        if (data.userSelectedType == 'R') {
+                            //법정동명이 있을 경우 추가한다.
+                            if (data.bname != '') {
+                                subAddr += data.bname;
+                            }
+                            //건물명이 있을 경우에 추가한다.
+                            if (data.buildingName != '') {
+                                subAddr += (subAddr != '' ? ', ' + data.buildingName : data.buildingName);
+                            }
+                            //조합형 주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                            fullAddr += (subAddr != '' ? '(' + subAddr + ')' : '');
+                        }
+                        //우편번호와 주소정보를 행당 필드에 나타낸다.
+                        //5자리의 새 우편번호
+                        document.getElementById('zipCode').value = data.zonecode;
+                        document.getElementById('address01').value = fullAddr;
+                        //커서를 상세주소 입력필드로 이동시킨다.
+                        document.getElementById('address02').focus();
+                    }
+                }).open();
+            }
+
+            //아이디 체크여부
+            var idCheck = false;
+            function join(){
+                var isNotNull = false;
+                $('#signUpForm').find('input').each((i, item) => {
+                    if(item.value === ''){
+                        alert(item.placeholder + '값을 입력하세요')
+                        item.focus()
+                        //break
+                        return false
+                    }
+                })
+                if(isNotNull) {
+                    console.log("null이 없음")
+                }
+            }
+
+            function isIdCheck() {
+                $.ajax({
+                    url: '/isIdCheck',
+                    data : {
+                        userId : $('[name=userId]').val()
+                    },
+                    type: 'POST',
+                    success: (res) => {
+                        if(res) {
+                            alert('해당 아이디로 가입이 가능합니다.');
+                            $('[name=userId]').prop('readonly', true);
+                            $('#idCheckBtn').prop('disabled', true);
+                            idCheck = true;
+                        } else {
+                            alert('이미 가입된 아이디가 있습니다.');
+                        }
+                    },
+                    error: (data) => {
+                        console.log(data)
+                    }
+                });
+            }
+        </script>
     </th:block>
 </html>

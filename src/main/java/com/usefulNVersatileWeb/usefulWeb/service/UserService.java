@@ -15,10 +15,6 @@ public class UserService {
     @Autowired
     UserMapper userMapper;
 
-    public List<UserVo> userInfo() throws Exception {
-        return userMapper.userInfo();
-    }
-
     public UserVo AddUser(UserVo userVo) throws Exception {
         userMapper.addUser(userVo);
         return userVo;
@@ -30,4 +26,9 @@ public class UserService {
         userVO.setUserPassword(shaPass);
         return userMapper.loginForm(userVO);
     }
+
+    public List<UserVo> isUserIdCheck(UserVo userVO) throws Exception {
+        return userMapper.isUserIdCheck(userVO);
+    }
+
 }

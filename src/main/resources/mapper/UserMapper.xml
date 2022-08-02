@@ -4,47 +4,51 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.usefulNVersatileWeb.usefulWeb.mapper.UserMapper">
 
-    <!--리스트 조회-->
-    <select id="userInfo" parameterType="java.util.HashMap" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
-        select * from userTable
+    <!--회원가입 아이디 체크-->
+    <select id="isUserIdCheck" parameterType="java.util.HashMap" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
+        SELECT USER_ID as userId from USER where USER_ID = #{userId}
     </select>
 
     <!--회원가입-->
     <insert id="addUser" parameterType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo" useGeneratedKeys="true" keyProperty="seq">
         INSERT INTO USER
-            (USER_ID,
-             USER_PASSWORD,
-             USER_NAME,
-             USER_ADD,
-             USER_PHONE1,
-             USER_PHONE2,
-             USER_PHONE3,
-             USER_EMAIL,
-             USER_REG_DATE)
-        VALUES
-            (#{userId},
-            #{userPassword},
-            #{userName},
-            #{userAdd},
-            #{userPNum1},
-            #{userPNum2},
-            #{userPNum3},
-            #{userEmail},
-            now())
+            (`USER_ID`
+          , `USER_PASSWORD`
+          , `USER_NAME`
+          , `USER_ZIPCODE`
+          , `USER_ADD`
+          , `USER_DETAIL_ADD`
+          , `USER_PHONE1`
+          , `USER_PHONE2`
+          , `USER_PHONE3`
+          , `USER_EMAIL`
+          , `USER_REG_DATE`)
+          VALUES
+          (#{userId}
+          , #{userPassword}
+          , #{userName}
+          , #{zipCode}
+          , #{address}
+          , #{detailAddress}
+          , #{userPNum1}
+          , #{userPNum2}
+          , #{userPNum3}
+          , #{userEmail}
+          , now()
+        );
     </insert>
 
     <!--로그인폼-->
     <select id="loginForm" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
-        SELECT SEQ,
-               USER_ID,
-               USER_PASSWORD,
-               USER_NAME,
-               USER_ADD,
-               USER_PHONE1,
-               USER_PHONE2,
-               USER_PHONE3,
-               USER_EMAIL,
-               USER_REG_DATE,
+        SELECT USER_SEQ as seq,
+               USER_ID as userId,
+               USER_NAME as userName,
+               USER_ADD as userAdd,
+               USER_PHONE1 as userPNum1,
+               USER_PHONE2 as userPNum2,
+               USER_PHONE3 as userPNum3,
+               USER_EMAIL as userEmail,
+               USER_REG_DATE as userRegDate
         FROM USER
         WHERE USER_ID = #{userId}
           AND USER_PASSWORD = #{userPassword}

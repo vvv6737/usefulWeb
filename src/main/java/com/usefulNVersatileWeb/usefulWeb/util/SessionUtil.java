@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class SessionUtil {
-    final static String SESSION_USER_KEY = "USER_KEY";
+    final static String SESSION_USER_KEY = "USER";
 
     public static boolean setUser(UserVo user, HttpServletRequest request){
         if (user == null) return false;

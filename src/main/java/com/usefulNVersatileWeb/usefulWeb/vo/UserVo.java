@@ -12,6 +12,9 @@ public class UserVo {
     private String userPNum1;
     private String userPNum2;
     private String userPNum3;
+    private String zipCode;
+    private String address;
+    private String detailAddress;
     private String userEmail;
     private String userRegDate;
 }

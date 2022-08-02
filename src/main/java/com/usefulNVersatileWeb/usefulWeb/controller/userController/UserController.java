@@ -9,10 +9,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.security.NoSuchAlgorithmException;
 
 @Controller
@@ -26,9 +28,27 @@ public class UserController {
         return "/view/Login";
     }
 
+    @GetMapping(value = "/logout", name = "로그아웃")
+    public String logout(HttpSession session) {
+        session.removeAttribute("USER");
+        return "redirect:/main/mainView";
+    }
+
     @GetMapping(value = "/signUp", name = "회원가입 화면")
-    public String signUp() {
+    public String signUp(HttpSession session) {
+        session.removeAttribute("isIdCheck");
         return "/view/SignUp";
+    }
+
+    @ResponseBody
+    @PostMapping(value = "/isIdCheck", name = "회원가입 ID체크")
+    public Boolean isIdCheck(UserVo userVo, HttpSession session) throws Exception {
+        if(userService.isUserIdCheck(userVo).size() == 0) {
+            session.setAttribute("isIdCheck", true);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @PostMapping(value = "/loginForm", name = "로그인폼")
@@ -36,7 +56,7 @@ public class UserController {
         try {
             UserVo user = userService.loginForm(userVo);
             if (SessionUtil.setUser(user, request)){
-                return "redirect:/main";
+                return "redirect:/main/mainView";
             } else {
                 attributes.addFlashAttribute("msg", false);
                 return "redirect:/login";
@@ -47,16 +67,24 @@ public class UserController {
     }
 
     @PostMapping(value =  "/addUser", name = "회원가입")
-    public String addUser(UserVo userVO) throws Exception{
-        String password = userVO.getUserPassword();
-        String shaPass = null;
+    public Boolean addUser(HttpSession session, UserVo userVO, RedirectAttributes attributes) throws Exception{
         try {
-            shaPass = StringUtil.sha256(password);
-            userVO.setUserPassword(shaPass);
-            userService.AddUser(userVO);
-            return "redirect:/main";
+            Boolean chk = (Boolean) session.getAttribute("isIdCheck");
+            System.out.println(chk);
+            if(chk) {
+                String password = userVO.getUserPassword();
+                String shaPass = null;
+                shaPass = StringUtil.sha256(password);
+                userVO.setUserPassword(shaPass);
+                userService.AddUser(userVO);
+                return true;
+            } else {
+                attributes.addFlashAttribute("msg", "이미 회원정보가 있습니다");
+                return false;
+            }
         } catch (NoSuchAlgorithmException e) {
-            return "redirect:/main";
+            attributes.addFlashAttribute("msg", "회원가입 에러");
+            return false;
         }
     }
 
