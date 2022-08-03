@@ -123,28 +123,6 @@
 
             //아이디 체크여부
             var idCheck = false;
-            function join(){
-                var isNotNull = false;
-                $('#signUpForm').find('input').each((i, item) => {
-                    if(item.value === ''){
-                        alert(item.placeholder + '값을 입력하세요')
-                        item.focus()
-                        //break
-                        return false
-                    }
-                })
-
-                if($('#pw1').val() != $('#pw2').val()) {
-                    alert('비밀번호를 확인해주세요')
-                    $('#pw1').focus()
-                    return
-                }
-
-                if(isNotNull) {
-                    console.log("null이 없음")
-                }
-            }
-
             function isIdCheck() {
                 $.ajax({
                     url: '/isIdCheck',
@@ -167,6 +145,35 @@
                     }
                 });
             }
+
+
+            // 1.인풋 널체크
+            // 2.아이디 체크
+            // 3.비밀번호 체크
+            // 4.회원가입
+            function join(){
+                $('#signUpForm').find('input').each((i, item) => {
+                    if(item.value === ''){
+                        alert(item.placeholder + '값을 입력하세요')
+                        item.focus()
+                        //break
+                        return false
+                    }
+                })
+
+                if(!idCheck) {
+                    alert('ID를 체크해주세요.')
+                    return
+                }
+
+                if($('#pw1').val() != $('#pw2').val()) {
+                    alert('입력하신 비밀번호가 다릅니다.')
+                    $('#pw1').focus()
+                    return
+                }
+            }
+
+
         </script>
     </th:block>
 </html>
