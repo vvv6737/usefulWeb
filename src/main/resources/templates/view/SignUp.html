@@ -17,10 +17,10 @@
                         <button type="button" class="button fit" id="idCheckBtn" onclick="isIdCheck()" th:disabled="${session.isIdCheck != null}">ID Check</button>
                     </div>
                     <div class="col-12 col-12-xsmall">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="pw1">
                     </div>
                     <div class="col-12 col-12-xsmall">
-                        <input type="password" name="userPassword" placeholder="Password Again">
+                        <input type="password" name="userPassword" placeholder="Password Again" id="pw2">
                     </div>
                     <div class="col-12 col-12-xsmall">
                         <input type="email" name="userEmail" placeholder="Email">
@@ -133,6 +133,13 @@
                         return false
                     }
                 })
+
+                if($('#pw1').val() != $('#pw2').val()) {
+                    alert('비밀번호를 확인해주세요')
+                    $('#pw1').focus()
+                    return
+                }
+
                 if(isNotNull) {
                     console.log("null이 없음")
                 }
