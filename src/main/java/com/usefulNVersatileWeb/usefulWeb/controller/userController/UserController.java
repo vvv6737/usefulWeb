@@ -66,11 +66,12 @@ public class UserController {
         }
     }
 
+    @ResponseBody
     @PostMapping(value =  "/addUser", name = "회원가입")
     public Boolean addUser(HttpSession session, UserVo userVO, RedirectAttributes attributes) throws Exception{
         try {
+            //아이디 체크를 하였는지.
             Boolean chk = (Boolean) session.getAttribute("isIdCheck");
-            System.out.println(chk);
             if(chk) {
                 String password = userVO.getUserPassword();
                 String shaPass = null;
@@ -79,7 +80,6 @@ public class UserController {
                 userService.AddUser(userVO);
                 return true;
             } else {
-                attributes.addFlashAttribute("msg", "이미 회원정보가 있습니다");
                 return false;
             }
         } catch (NoSuchAlgorithmException e) {

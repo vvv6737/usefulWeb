@@ -152,24 +152,54 @@
             // 3.비밀번호 체크
             // 4.회원가입
             function join(){
+                let pwCheck = false;
+                let chkArr = [];
                 $('#signUpForm').find('input').each((i, item) => {
                     if(item.value === ''){
                         alert(item.placeholder + '값을 입력하세요')
                         item.focus()
                         //break
                         return false
+                    } else {
+                        chkArr.push(i);
                     }
                 })
 
-                if(!idCheck) {
-                    alert('ID를 체크해주세요.')
-                    return
+                //input null체크 후
+                if(chkArr.length === 13) {
+                    if(!idCheck) {
+                        alert('ID를 체크해주세요.')
+                        return
+                    }
+                    if(idCheck && $('#pw1').val() != $('#pw2').val()) {
+                        alert('입력하신 비밀번호가 다릅니다.')
+                        $('#pw1').focus()
+                        return
+                    } else {
+                        pwCheck = true;
+                    }
                 }
 
-                if($('#pw1').val() != $('#pw2').val()) {
-                    alert('입력하신 비밀번호가 다릅니다.')
-                    $('#pw1').focus()
-                    return
+                //모든 체크 후
+                if(chkArr.length === 13 && idCheck && pwCheck) {
+                    let signUpForm = $('#signUpForm').serialize();
+                    $.ajax({
+                        url: '/addUser',
+                        data : signUpForm,
+                        type: 'POST',
+                        success: (res) => {
+                            if(res) {
+                                alert('회원가입에 성공하셨습니다.');
+                                location.href = '/login';
+                            } else {
+                                alert('정상적인 화원가입시도를 하지 않으셨습니다.');
+                            }
+                        },
+                        error: (data) => {
+                            alert('회원가입 에러');
+                            console.log(data)
+                        }
+                    });
                 }
             }
 

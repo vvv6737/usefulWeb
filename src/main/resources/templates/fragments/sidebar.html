@@ -9,6 +9,12 @@
                 <header>
                     <h2>NEWS</h2>
                     <p>다양한 뉴스를 검색해보세요.</p>
+                    <section>
+                        <form class="search" method="get" action="#">
+                            <input type="text" name="query" placeholder="Search">
+                        </form>
+                    </section>
+
                     <input onKeyPress="if( event.keyCode==13 ){naverNews(this.value);}">
                 </header>
             </section>
