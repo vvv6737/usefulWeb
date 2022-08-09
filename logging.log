@@ -364,3 +364,11 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-08-06 16:45:13,946 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-06 16:45:13,955 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-06 16:45:16,913 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 1640 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-06 16:45:16,914 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-06 16:45:18,139 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-06 16:45:18,140 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-06 16:45:18,208 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-06 16:45:18,908 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 2.361 seconds (JVM running for 3.252)
