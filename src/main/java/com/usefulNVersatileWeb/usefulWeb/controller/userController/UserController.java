@@ -54,11 +54,19 @@ public class UserController {
     @PostMapping(value = "/loginForm", name = "로그인폼")
     public String loginForm(UserVo userVo, HttpServletRequest request, RedirectAttributes attributes) {
         try {
+            if(userVo.getUserId() == ""){
+                attributes.addFlashAttribute("nullId", "아이디를 입력해주세요.");
+                return "redirect:/login";
+            }
+            if(userVo.getUserPassword() == "") {
+                attributes.addFlashAttribute("nullPwd", "비밀번호를 입력해주세요.");
+                return "redirect:/login";
+            }
             UserVo user = userService.loginForm(userVo);
             if (SessionUtil.setUser(user, request)){
                 return "redirect:/main/mainView";
             } else {
-                attributes.addFlashAttribute("msg", false);
+                attributes.addFlashAttribute("noUser", "사용자 정보가 없습니다.");
                 return "redirect:/login";
             }
         } catch (NoSuchAlgorithmException e) {
