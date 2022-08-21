@@ -25,16 +25,6 @@ public class MainController {
         return UrlUtil.url("Main", request);
     }
 
-    @GetMapping(value = "/register", name = "게시판 등록, 수정 페이지")
-    public String register(Model model, HttpServletRequest request) throws Exception {
-        return UrlUtil.url("Register", request);
-    }
-
-    @GetMapping(value = "/DetailView", name = "게시판 상세 페이지")
-    public String detailView(Model model, HttpServletRequest request) throws Exception {
-        return UrlUtil.url("DetailView", request);
-    }
-
     @ResponseBody
     @PostMapping(value = "/naverNewsApi",  name = "네이버 뉴스 api")
     public String naverNews(HttpServletRequest req) {

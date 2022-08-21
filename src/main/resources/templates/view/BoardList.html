@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
+    <th:block layout:fragment="content">
+        <section>
+            <div class="row">
+                <div class="col-6">
+                    <h3>게시글 목록</h3>
+                </div>
+                <div class="col-6">
+                    <ul class="actions small" style="float: right;">
+                        <li><a href="/board/register" class="button small">등록</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th width="15%">No.</th>
+                        <th width="60%">제목</th>
+                        <th width="25%">작성자</th>
+                    </tr>
+                    </thead>
+                    <tbody style="cursor:pointer;">
+                    <tr>
+                        <td>1</td>
+                        <td>제목 예시</td>
+                        <td>홍길동</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="actions">
+                <li><a href="#" class="button small">Prev</a></li>
+                <li><a href="#" class="button small">Next</a></li>
+            </ul>
+        </section>
+    </th:block>
+</html>

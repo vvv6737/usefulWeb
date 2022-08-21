@@ -15,9 +15,9 @@
             <!-- Mini Posts -->
             <div id="newsData">
                 <section>
-                    <div class="search">
+                    <form class="search" onsubmit="return false">
                         <input id="inNewsSearch" type="text" onKeyPress="if( event.keyCode==13 ){naverNews(this.value);}" placeholder="News Search">
-                    </div>
+                    </form>
                 </section>
                 <section>
                     <div class="mini-posts">
@@ -49,10 +49,6 @@
                 </ul>
             </section>-->
             <script>
-                window.onload = function() {
-
-                };
-
                 function naverNews(data) {
                     var html
                     $('.mini-posts').empty()
@@ -68,16 +64,17 @@
                         });
                     }
                     function successResult(data) {
-                        $('#inNewsSearch').css('margin-bottom','1rem')
-                        var param = JSON.parse(data);
+                        if($('#inNewsSearch').val() !== ''){
 
-                        if(param.items.length === 0) {
-                            console.log(123)
-                            html = `<p style="color:#ff9797;">검색결과가 없습니다. 다시 검색 바랍니다.</p>`
-                            $('.mini-posts').append(html)
-                        } else {
-                            $(param.items).each((i, item) => {
-                                html = `<article class="mini-post">
+                            $('#inNewsSearch').css('margin-bottom','1rem')
+                            var param = JSON.parse(data);
+
+                            if(param.items.length === 0) {
+                                html = `<p style="color:#ff9797;">검색결과가 없습니다. 다시 검색 바랍니다.</p>`
+                                $('.mini-posts').html(html)
+                            } else {
+                                $(param.items).each((i, item) => {
+                                    html = `<article class="mini-post">
                                         <header>
                                             <h3><a href="${item.link}">${item.title}</a></h3>
                                             <time class="published" datetime="2015-10-20">${item.pubDate}</time>
@@ -89,8 +86,13 @@
                                             <img src="http://xn--9t4b29c1yncyf.com/data/item/test1/7YWM7Iqk7Yq4.jpg" alt=""/>
                                         </a>
                                     </article>`
-                                $('.mini-posts').append(html)
-                            });
+                                    $('.mini-posts').append(html)
+                                });
+                            }
+
+                        } else {
+                            html = `<p style="color:#ff9797;">검색어를 입력해주세요.</p>`
+                            $('.mini-posts').html(html)
                         }
                     }
                     function errorResult(data) {

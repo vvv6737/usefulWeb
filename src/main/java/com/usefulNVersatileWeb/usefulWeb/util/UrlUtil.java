@@ -8,7 +8,6 @@ public class UrlUtil {
 
     //url
     public static String url(String urlString, HttpServletRequest request) {
-//        System.out.println(ipView(request));
         return WEB_PATH + urlString;
     }
 

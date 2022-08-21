@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpSession;
 import java.security.NoSuchAlgorithmException;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -56,21 +58,21 @@ public class UserController {
         try {
             if(userVo.getUserId() == ""){
                 attributes.addFlashAttribute("nullId", "아이디를 입력해주세요.");
-                return "redirect:/login";
+                return "redirect:/user/login";
             }
             if(userVo.getUserPassword() == "") {
                 attributes.addFlashAttribute("nullPwd", "비밀번호를 입력해주세요.");
-                return "redirect:/login";
+                return "redirect:/user/login";
             }
             UserVo user = userService.loginForm(userVo);
             if (SessionUtil.setUser(user, request)){
                 return "redirect:/main/mainView";
             } else {
                 attributes.addFlashAttribute("noUser", "사용자 정보가 없습니다.");
-                return "redirect:/login";
+                return "redirect:/user/login";
             }
         } catch (NoSuchAlgorithmException e) {
-            return "redirect:/login";
+            return "redirect:/user/login";
         }
     }
 

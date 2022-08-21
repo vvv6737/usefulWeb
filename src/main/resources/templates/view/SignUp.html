@@ -60,7 +60,7 @@
                     <div class="col-12">
                         <ul class="actions">
                             <li><input type="submit" value="Join" onclick="join()"></li>
-                            <li><input type="button" value="Login" onclick="location.href='/login'"></li>
+                            <li><input type="button" value="Login" onclick="location.href='/user/login'"></li>
                             <p th:text="${msg}"></p>
                         </ul>
                     </div>
@@ -125,7 +125,7 @@
             var idCheck = false;
             function isIdCheck() {
                 $.ajax({
-                    url: '/isIdCheck',
+                    url: '/user/isIdCheck',
                     data : {
                         userId : $('[name=userId]').val()
                     },
@@ -184,13 +184,13 @@
                 if(chkArr.length === 13 && idCheck && pwCheck) {
                     let signUpForm = $('#signUpForm').serialize();
                     $.ajax({
-                        url: '/addUser',
+                        url: '/user/addUser',
                         data : signUpForm,
                         type: 'POST',
                         success: (res) => {
                             if(res) {
                                 alert('회원가입에 성공하셨습니다.');
-                                location.href = '/login';
+                                location.href = '/user/login';
                             } else {
                                 alert('정상적인 화원가입시도를 하지 않으셨습니다.');
                             }
