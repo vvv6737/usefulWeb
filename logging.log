@@ -608,3 +608,58 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view
 2022-08-21 19:04:04,292 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-08-21 19:04:12,442 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-9] HikariPool-1 - Starting...
 2022-08-21 19:04:12,720 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-9] HikariPool-1 - Start completed.
+2022-08-21 19:07:16,113 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-21 19:07:16,123 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-08-21 19:07:20,175 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:07:20,176 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:07:21,788 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:07:21,788 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:07:21,854 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:07:22,636 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 3.014 seconds (JVM running for 3.884)
+2022-08-21 19:07:22,856 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-21 19:07:32,326 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-10] HikariPool-1 - Starting...
+2022-08-21 19:07:32,623 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-10] HikariPool-1 - Start completed.
+2022-08-21 19:10:48,602 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2022-08-21 19:10:48,638 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2022-08-21 19:10:48,974 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:10:48,974 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:10:49,250 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:10:49,250 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:10:49,266 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:10:49,415 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.678 seconds (JVM running for 210.666)
+2022-08-21 19:17:34,895 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:17:34,895 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:17:35,113 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:17:35,114 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:17:35,125 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:17:35,314 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.648 seconds (JVM running for 616.569)
+2022-08-21 19:17:50,983 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:17:50,984 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:17:51,191 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:17:51,191 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:17:51,201 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:17:51,370 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.418 seconds (JVM running for 632.625)
+2022-08-21 19:17:55,912 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:17:55,913 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:17:56,107 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:17:56,107 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:17:56,118 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:17:56,258 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.37 seconds (JVM running for 637.513)
+2022-08-21 19:18:14,965 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:18:14,966 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:18:15,193 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:18:15,194 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:18:15,206 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:18:15,395 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.453 seconds (JVM running for 656.651)
+2022-08-21 19:18:23,966 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:18:23,966 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:18:24,139 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:18:24,139 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:18:24,149 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:18:24,275 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.33 seconds (JVM running for 665.53)
+2022-08-21 19:19:01,222 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 11.0.9.1 on jeonghoon-MacPro.local with PID 3928 (/Users/macpro/Desktop/git/usefulWeb/out/production/classes started by macpro in /Users/macpro/Desktop/git/usefulWeb)
+2022-08-21 19:19:01,222 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-08-21 19:19:01,441 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-08-21 19:19:01,441 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-21 19:19:01,451 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-21 19:19:01,604 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.419 seconds (JVM running for 702.86)

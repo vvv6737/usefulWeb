@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usefulNVersatileWeb.usefulWeb.mapper.BoradMapper">
+    <!--게시글 첫 등록-->
+    <insert id="addBoard" parameterType="com.usefulNVersatileWeb.usefulWeb.vo.BoardVo" keyProperty="seq">
+        INSERT INTO BOARD
+        (`USER_SEQ`
+        , `TITLE`
+        , `CONTENT`
+        , `FIRST_UPDATE`
+        , `IP`)
+        VALUES
+        (#{userSeq}
+        , #{title}
+        , #{imgFileName}
+        , #{content}
+        , now()
+        , #{ip}
+        );
+    </insert>
+
+
+</mapper>
