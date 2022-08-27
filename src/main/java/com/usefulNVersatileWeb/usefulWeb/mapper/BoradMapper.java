@@ -12,4 +12,5 @@ public interface BoradMapper {
     int addBoard(BoardVo boardVo) throws Exception;
 
     List<BoardVo> boardList(BoardVo boardVo) throws Exception;
+
 }
