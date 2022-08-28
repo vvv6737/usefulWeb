@@ -1,5 +1,6 @@
 package com.usefulNVersatileWeb.usefulWeb.service;
 
+import com.usefulNVersatileWeb.usefulWeb.mapper.BoradMapper;
 import com.usefulNVersatileWeb.usefulWeb.mapper.UserMapper;
 import com.usefulNVersatileWeb.usefulWeb.util.StringUtil;
 import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
@@ -13,6 +14,6 @@ import java.util.List;
 public class BoardService {
 
     @Autowired
-    BoardService boardService;
+    BoradMapper boradMapper;
 
 }
