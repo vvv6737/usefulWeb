@@ -33,6 +33,7 @@ public class BoardController {
             attributes.addFlashAttribute("noUserService", "로그인이 필요한 서비스입니다.");
             return "redirect:/user/login";
         }
+
         return UrlUtil.url("Register", request);
     }
 
