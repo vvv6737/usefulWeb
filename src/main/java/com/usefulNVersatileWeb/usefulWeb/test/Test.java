@@ -10,6 +10,5 @@ public class Test{
     public static void main(String[] args) throws NoSuchAlgorithmException {
         String a = StringUtil.sha256("");
         System.out.println(a);
-
     }
 }
