@@ -43,7 +43,7 @@
         SELECT USER_SEQ as seq,
                USER_ID as userId,
                USER_NAME as userName,
-               USER_ADD as userAdd,
+               USER_ADD as address,
                USER_PHONE1 as userPNum1,
                USER_PHONE2 as userPNum2,
                USER_PHONE3 as userPNum3,

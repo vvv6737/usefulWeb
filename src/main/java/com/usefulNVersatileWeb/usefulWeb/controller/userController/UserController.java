@@ -31,9 +31,10 @@ public class UserController {
     }
 
     @GetMapping(value = "/logout", name = "로그아웃")
-    public String logout(HttpSession session) {
+    public String logout(HttpSession session, String url) {
         session.removeAttribute("USER");
-        return "redirect:/main/mainView";
+        url = url == null ? "/main/mainView" : url;
+        return "redirect:" + url;
     }
 
     @GetMapping(value = "/signUp", name = "회원가입 화면")
