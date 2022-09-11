@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -23,6 +24,10 @@ public class BoardService {
 
     public int addBoard(BoardVo boardVo) throws Exception {
         return boradMapper.addBoard(boardVo);
+    }
+
+    public HashMap<String, Object> boardDetail(int seq) throws Exception {
+        return boradMapper.boardDetail(seq);
     }
 
     public int updateBoard(BoardVo boardVo) throws Exception {

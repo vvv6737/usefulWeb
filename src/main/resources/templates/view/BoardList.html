@@ -19,19 +19,21 @@
                 <table>
                     <thead>
                     <tr>
-                        <th width="15%">No.</th>
-                        <th width="60%">제목</th>
-                        <th width="25%">작성자</th>
+                        <th width="10%">No.</th>
+                        <th width="50%">제목</th>
+                        <th width="20%">작성자</th>
+                        <th width="40%">등록일자</th>
                     </tr>
                     </thead>
                     <tbody style="cursor:pointer;">
                     <tr th:if="${boardList.size == 0}">
-                        <td colspan="3">등록된 게시글이 없습니다.</td>
+                        <td colspan="3" style="text-align: center;">등록된 게시글이 없습니다.</td>
                     </tr>
-                    <tr th:unless="${boardList.size == 0}" th:each="list : ${boardList}">
-                        <td th:text="${list.seq}"></td>
-                        <td th:text="${list.seq}"></td>
-                        <td th:text="${list.seq}"></td>
+                    <tr th:unless="${boardList.size == 0}" th:each="data : ${boardList}" onclick="boardDetail(this)">
+                        <td th:text="${data.BOARD_SEQ}"></td>
+                        <td th:text="${data.TITLE}"></td>
+                        <td th:text="${data.USER_ID}"></td>
+                        <td th:text="${#temporals.format(data.FIRST_UPDATE, 'yyyy-MM-dd HH:mm')}"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -42,5 +44,12 @@
                 <li><a href="#" class="button small">Next</a></li>
             </ul>
         </section>
+
+        <script>
+            function boardDetail(obj) {
+                console.log(obj)
+                obj.children[0].textContent
+            }
+        </script>
     </th:block>
 </html>

@@ -67,6 +67,10 @@ public class UserController {
             }
             UserVo user = userService.loginForm(userVo);
             if (SessionUtil.setUser(user, request)){
+                String url = request.getParameter("url");
+                if(url != "") {
+                    return "redirect:" + url;
+                }
                 return "redirect:/main/mainView";
             } else {
                 attributes.addFlashAttribute("noUser", "사용자 정보가 없습니다.");

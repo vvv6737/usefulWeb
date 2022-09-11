@@ -7,14 +7,12 @@ import com.usefulNVersatileWeb.usefulWeb.vo.BoardVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -35,7 +33,7 @@ public class BoardController {
         Object userInfo = session.getAttribute("USER");
         if(userInfo == null) {
             attributes.addFlashAttribute("noUserService", "로그인이 필요한 서비스입니다.");
-            return "redirect:/user/login";
+            return "redirect:/user/login?url=/board/register";
         }
         return UrlUtil.url("Register", request);
     }
@@ -53,10 +51,11 @@ public class BoardController {
         return resultInt;
     }
 
-    @ResponseBody
-    @PostMapping(value = "/register", name = "게시판 등록, 수정 프로세스")
-    public List<BoardVo> registerProc(BoardVo boardVo) throws Exception {
-        return null;
+    @GetMapping(value = "/datail/{seq}", name = "게시판 상세 페이지")
+    public String boardDetail(@PathVariable int seq, HttpServletRequest request, Model model) throws Exception {
+        HashMap<String, Object> resultMap = boardService.boardDetail(seq);
+        model.addAttribute("result", resultMap);
+        return "/view/Register";
     }
 
     @GetMapping(value = "/detailView", name = "게시판 상세 페이지")

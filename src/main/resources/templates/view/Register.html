@@ -3,7 +3,8 @@
     <th:block layout:fragment="content">
         <section>
             <h3>BOARD INSERT</h3>
-            <form method="post" action="#">
+            <form id="boardRegister">
+                <input type="hidden" name="userSeq" th:value="${session.USER.seq}">
                 <div class="row gtr-uniform">
                     <div class="col-12 col-12-xsmall">
                         <input type="text" name="title" value="" placeholder="Title">
@@ -48,13 +49,38 @@
 
                     <div class="col-12">
                         <ul class="actions">
-                            <li><input type="submit" value="Register"></li>
-                            <li><input type="reset" value="Reset"></li>
+                            <li><input type="button" value="Register" onclick="register()"></li>
+                            <li><input type="button" value="Reset" onclick="reset()"></li>
                         </ul>
                     </div>
 
                 </div>
             </form>
         </section>
+
+        <script>
+            function register() {
+                const data = $('#boardRegister').serialize();
+                $.ajax({
+                    url: '/board/addBoard',
+                    type: 'POST',
+                    data: data,
+                    success: successResult,
+                    error: errorResult
+                });
+
+                function successResult(res) {
+                    console.log(res)
+                }
+
+                function errorResult(e) {
+                    console.log(e)
+                }
+            }
+
+            function reset() {
+                console.log("res")
+            }
+        </script>
     </th:block>
 </html>

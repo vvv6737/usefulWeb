@@ -4,6 +4,7 @@
         <section>
             <h3>Login</h3>
             <form method="post" action="/user/loginForm">
+                <input type="hidden" name="url" th:value="${#httpServletRequest.getParameter('url')}">
                 <div class="row gtr-uniform">
                     <div class="col-12 col-12-xsmall">
                         <input type="text" name="userId" placeholder="ID">
