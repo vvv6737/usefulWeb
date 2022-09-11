@@ -13,6 +13,8 @@
                 </div>
             </div>
 
+            <p ></p>
+
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -23,10 +25,13 @@
                     </tr>
                     </thead>
                     <tbody style="cursor:pointer;">
-                    <tr>
-                        <td>1</td>
-                        <td>제목 예시</td>
-                        <td>홍길동</td>
+                    <tr th:if="${boardList.size == 0}">
+                        <td colspan="3">등록된 게시글이 없습니다.</td>
+                    </tr>
+                    <tr th:unless="${boardList.size == 0}" th:each="list : ${boardList}">
+                        <td th:text="${list.seq}"></td>
+                        <td th:text="${list.seq}"></td>
+                        <td th:text="${list.seq}"></td>
                     </tr>
                     </tbody>
                 </table>

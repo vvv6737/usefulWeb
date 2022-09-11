@@ -3,6 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.usefulNVersatileWeb.usefulWeb.mapper.BoradMapper">
+
+    <select id="boardList" resultType="Map">
+        select
+            *
+        from
+            BOARD;
+    </select>
+
     <!--게시글 첫 등록-->
     <insert id="addBoard" parameterType="com.usefulNVersatileWeb.usefulWeb.vo.BoardVo" keyProperty="seq">
         INSERT INTO BOARD

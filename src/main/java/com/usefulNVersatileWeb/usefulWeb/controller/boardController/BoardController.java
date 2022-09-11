@@ -1,8 +1,8 @@
 package com.usefulNVersatileWeb.usefulWeb.controller.boardController;
 
-import com.usefulNVersatileWeb.usefulWeb.service.UserService;
+import com.usefulNVersatileWeb.usefulWeb.service.BoardService;
+import com.usefulNVersatileWeb.usefulWeb.util.IpUtil;
 import com.usefulNVersatileWeb.usefulWeb.util.UrlUtil;
-import com.usefulNVersatileWeb.usefulWeb.util.naverNewsApi;
 import com.usefulNVersatileWeb.usefulWeb.vo.BoardVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,8 +21,12 @@ import java.util.List;
 @RequestMapping("/board")
 public class BoardController {
 
+    @Autowired
+    BoardService boardService;
+
     @GetMapping(value = "/list", name = "게시판 목록")
-    public String mainView(Model model, HttpServletRequest request) throws Exception {
+    public String mainView(Model model, BoardVo boardVo, HttpServletRequest request) throws Exception {
+        model.addAttribute("boardList", boardService.boardList(boardVo));
         return UrlUtil.url("BoardList", request);
     }
 
@@ -33,8 +37,20 @@ public class BoardController {
             attributes.addFlashAttribute("noUserService", "로그인이 필요한 서비스입니다.");
             return "redirect:/user/login";
         }
-
         return UrlUtil.url("Register", request);
+    }
+
+    @ResponseBody
+    @PostMapping(value = "/addBoard", name = "게시판 등록 API")
+    public Object registerView(HttpSession session, BoardVo boardVo, HttpServletRequest request) throws Exception {
+        Object userInfo = session.getAttribute("USER");
+        if(userInfo == null) {
+            return "세션이 종료되었습니다. 다시 로그인하여 작성해주세요.";
+        }
+        String getIp = IpUtil.ipView(request);
+        boardVo.setIp(getIp);
+        int resultInt = boardService.addBoard(boardVo);
+        return resultInt;
     }
 
     @ResponseBody
