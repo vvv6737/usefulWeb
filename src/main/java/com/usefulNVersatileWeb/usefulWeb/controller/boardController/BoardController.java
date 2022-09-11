@@ -31,6 +31,8 @@ public class BoardController {
     @GetMapping(value = "/register", name = "게시판 등록, 수정 페이지")
     public String registerView(Model model, HttpServletRequest request, HttpSession session, RedirectAttributes attributes) throws Exception {
         Object userInfo = session.getAttribute("USER");
+        HashMap<String, Object> resultMap = new HashMap<>();
+        model.addAttribute("result", resultMap);
         if(userInfo == null) {
             attributes.addFlashAttribute("noUserService", "로그인이 필요한 서비스입니다.");
             return "redirect:/user/login?url=/board/register";
@@ -52,7 +54,7 @@ public class BoardController {
     }
 
     @GetMapping(value = "/datail/{seq}", name = "게시판 상세 페이지")
-    public String boardDetail(@PathVariable int seq, HttpServletRequest request, Model model) throws Exception {
+    public String boardDetail(@PathVariable int seq, Model model) throws Exception {
         HashMap<String, Object> resultMap = boardService.boardDetail(seq);
         model.addAttribute("result", resultMap);
         return "/view/Register";
