@@ -1,6 +1,6 @@
-package com.usefulNVersatileWeb.usefulWeb.service;
+package com.usefulNVersatileWeb.usefulWeb.user.service;
 
-import com.usefulNVersatileWeb.usefulWeb.mapper.UserMapper;
+import com.usefulNVersatileWeb.usefulWeb.user.mapper.UserMapper;
 import com.usefulNVersatileWeb.usefulWeb.util.StringUtil;
 import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;

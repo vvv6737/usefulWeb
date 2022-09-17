@@ -1,7 +1,7 @@
-package com.usefulNVersatileWeb.usefulWeb.controller.mainController;
+package com.usefulNVersatileWeb.usefulWeb.main.controller;
 
+import com.usefulNVersatileWeb.usefulWeb.user.service.UserService;
 import com.usefulNVersatileWeb.usefulWeb.util.UrlUtil;
-import com.usefulNVersatileWeb.usefulWeb.service.UserService;
 import com.usefulNVersatileWeb.usefulWeb.util.naverNewsApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,7 +1,6 @@
-package com.usefulNVersatileWeb.usefulWeb.mapper;
+package com.usefulNVersatileWeb.usefulWeb.board.mapper;
 
 import com.usefulNVersatileWeb.usefulWeb.vo.BoardVo;
-import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.HashMap;

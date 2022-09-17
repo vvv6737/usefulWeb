@@ -4,7 +4,6 @@
         <section>
             <h3>BOARD INSERT</h3>
             <form id="boardRegister">
-                <input th:if="${session.USER != null}" type="hidden" name="userSeq" th:value="${session.USER.seq}">
                 <div class="row gtr-uniform">
                     <div class="col-12 col-12-xsmall">
                         <input type="text" name="title" th:value="${result.get('TITLE')}" placeholder="Title">
@@ -70,7 +69,8 @@
                 });
 
                 function successResult(res) {
-                    console.log(res)
+                    alert(res.msg)
+                    if(res.result) location.href = '/board/list';
                 }
 
                 function errorResult(e) {
@@ -79,7 +79,7 @@
             }
 
             function reset() {
-                console.log("res")
+                console.log("reset")
             }
         </script>
     </th:block>

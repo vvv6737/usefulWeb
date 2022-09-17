@@ -1,9 +1,10 @@
-package com.usefulNVersatileWeb.usefulWeb.controller.boardController;
+package com.usefulNVersatileWeb.usefulWeb.board.controller;
 
-import com.usefulNVersatileWeb.usefulWeb.service.BoardService;
+import com.usefulNVersatileWeb.usefulWeb.board.service.BoardService;
 import com.usefulNVersatileWeb.usefulWeb.util.IpUtil;
 import com.usefulNVersatileWeb.usefulWeb.util.UrlUtil;
 import com.usefulNVersatileWeb.usefulWeb.vo.BoardVo;
+import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,11 +14,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 
 @Controller
 @RequestMapping("/board")
-public class BoardController {
+public class ViewBoardController {
 
     @Autowired
     BoardService boardService;
@@ -25,7 +25,7 @@ public class BoardController {
     @GetMapping(value = "/list", name = "게시판 목록")
     public String mainView(Model model, BoardVo boardVo, HttpServletRequest request) throws Exception {
         model.addAttribute("boardList", boardService.boardList(boardVo));
-        return UrlUtil.url("BoardList", request);
+        return UrlUtil.url("board/BoardList", request);
     }
 
     @GetMapping(value = "/register", name = "게시판 등록, 수정 페이지")
@@ -37,31 +37,18 @@ public class BoardController {
             attributes.addFlashAttribute("noUserService", "로그인이 필요한 서비스입니다.");
             return "redirect:/user/login?url=/board/register";
         }
-        return UrlUtil.url("Register", request);
-    }
-
-    @ResponseBody
-    @PostMapping(value = "/addBoard", name = "게시판 등록 API")
-    public Object registerView(HttpSession session, BoardVo boardVo, HttpServletRequest request) throws Exception {
-        Object userInfo = session.getAttribute("USER");
-        if(userInfo == null) {
-            return "세션이 종료되었습니다. 다시 로그인하여 작성해주세요.";
-        }
-        String getIp = IpUtil.ipView(request);
-        boardVo.setIp(getIp);
-        int resultInt = boardService.addBoard(boardVo);
-        return resultInt;
+        return UrlUtil.url("board/BoardRegister", request);
     }
 
     @GetMapping(value = "/datail/{seq}", name = "게시판 상세 페이지")
     public String boardDetail(@PathVariable int seq, Model model) throws Exception {
         HashMap<String, Object> resultMap = boardService.boardDetail(seq);
         model.addAttribute("result", resultMap);
-        return "/view/Register";
+        return "/view/board/Register";
     }
 
     @GetMapping(value = "/detailView", name = "게시판 상세 페이지")
     public String detailView(Model model, HttpServletRequest request) throws Exception {
-        return UrlUtil.url("DetailView", request);
+        return UrlUtil.url("board/BoardDetailView", request);
     }
 }
