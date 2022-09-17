@@ -26,15 +26,15 @@
                     </tr>
                     </thead>
                     <tbody style="cursor:pointer;">
-                        <!--<tr th:if="${boardList.size == 0}">
+                        <tr th:if="${boardList.size == 0}">
                             <td colspan="3" style="text-align: center;">등록된 게시글이 없습니다.</td>
                         </tr>
                         <tr th:unless="${boardList.size == 0}" th:each="data : ${boardList}" onclick="boardDetail(this)">
-                            <td th:text="${data.BOARD_SEQ}"></td>
-                            <td th:text="${data.TITLE}"></td>
-                            <td th:text="${data.USER_ID}"></td>
-                            <td th:text="${#temporals.format(data.FIRST_UPDATE, 'yyyy-MM-dd HH:mm')}"></td>
-                        </tr>-->
+                            <td th:text="${data.get('boardSeq')}"></td>
+                            <td th:text="${data.get('title')}"></td>
+                            <td th:text="${data.get('userId') == null ? '아이디 정보없음' : data.get('userId')}"></td>
+                            <td th:text="${data.get('lUpdate') == null ? data.get('fUpdate') : data.get('lUpdate')}"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

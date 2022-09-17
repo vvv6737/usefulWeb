@@ -44,7 +44,7 @@ public class ViewBoardController {
     public String boardDetail(@PathVariable int seq, Model model) throws Exception {
         HashMap<String, Object> resultMap = boardService.boardDetail(seq);
         model.addAttribute("result", resultMap);
-        return "/view/board/Register";
+        return "/view/board/BoardRegister";
     }
 
     @GetMapping(value = "/detailView", name = "게시판 상세 페이지")

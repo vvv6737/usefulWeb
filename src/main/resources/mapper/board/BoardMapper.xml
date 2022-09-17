@@ -2,15 +2,15 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.usefulNVersatileWeb.usefulWeb.board.mapper.BoradMapper">
+<mapper namespace="com.usefulNVersatileWeb.usefulWeb.board.mapper.BoardMapper">
 
     <select id="boardList" resultType="map">
         select
-            b.BOARD_SEQ
-             ,b.TITLE
-             ,b.FIRST_UPDATE
-             ,b.LAST_UPDATE
-             ,u.USER_ID
+            b.BOARD_SEQ as boardSeq
+             ,b.TITLE as title
+             ,DATE_FORMAT(b.FIRST_UPDATE,'%Y-%m-%d') as fUpdate
+             ,DATE_FORMAT(b.LAST_UPDATE,'%Y-%m-%d') as lUpdate
+             ,u.USER_ID as userId
         from BOARD b
         left join user u
         on b.USER_SEQ = u.USER_SEQ

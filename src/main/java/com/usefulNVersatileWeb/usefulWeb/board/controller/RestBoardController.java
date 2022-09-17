@@ -21,7 +21,6 @@ public class RestBoardController {
     @Autowired
     BoardService boardService;
 
-    @ResponseBody
     @PostMapping(value = "/addBoard", name = "게시판 등록 API")
     public HashMap<String, Object> registerView(HttpSession session, BoardVo boardVo, HttpServletRequest request) throws Exception {
         HashMap<String, Object> resMap = new HashMap<>();

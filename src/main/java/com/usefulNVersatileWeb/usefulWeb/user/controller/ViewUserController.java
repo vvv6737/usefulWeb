@@ -28,6 +28,33 @@ public class ViewUserController {
         return "/view/user/Login";
     }
 
+    @GetMapping(value = "/loginForm", name = "로그인폼")
+    public String loginForm(UserVo userVo, HttpServletRequest request, RedirectAttributes attributes) {
+        try {
+            if(userVo.getUserId() == ""){
+                attributes.addFlashAttribute("nullId", "아이디를 입력해주세요.");
+                return "redirect:/user/login";
+            }
+            if(userVo.getUserPassword() == "") {
+                attributes.addFlashAttribute("nullPwd", "비밀번호를 입력해주세요.");
+                return "redirect:/user/login";
+            }
+            UserVo user = userService.loginForm(userVo);
+            if (SessionUtil.setUser(user, request)){
+                String url = request.getParameter("url");
+                if(url != "") {
+                    return "redirect:" + url;
+                }
+                return "redirect:/main/mainView";
+            } else {
+                attributes.addFlashAttribute("noUser", "사용자 정보가 없습니다.");
+                return "redirect:/user/login";
+            }
+        } catch (NoSuchAlgorithmException e) {
+            return "redirect:/user/login";
+        }
+    }
+
     @GetMapping(value = "/logout", name = "로그아웃")
     public String logout(HttpSession session, String url) {
         session.removeAttribute("USER");

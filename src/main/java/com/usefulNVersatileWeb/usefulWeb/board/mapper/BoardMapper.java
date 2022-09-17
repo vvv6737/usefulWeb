@@ -7,10 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 
 @Mapper
-public interface BoradMapper {
+public interface BoardMapper {
 
     //게시글 리스트
-    List<BoardVo> boardList(BoardVo boardVo) throws Exception;
+    List<HashMap<String, Object>> boardList(BoardVo boardVo) throws Exception;
 
     //게시글 추가
     int addBoard(BoardVo boardVo) throws Exception;
