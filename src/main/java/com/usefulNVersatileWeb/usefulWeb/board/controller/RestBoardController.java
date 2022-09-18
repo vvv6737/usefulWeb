@@ -4,6 +4,7 @@ import com.usefulNVersatileWeb.usefulWeb.board.service.BoardService;
 import com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo;
 import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
 import com.usefulNVersatileWeb.usefulWeb.util.IpUtil;
+import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,7 @@ public class RestBoardController {
     public HashMap<String, Object> registerView(HttpSession session, BoardVo boardVo, HttpServletRequest request) throws Exception {
         HashMap<String, Object> resMap = new HashMap<>();
 
-        UserVo userVo = (UserVo) session.getAttribute("USER");
+        UserVo userVo = SessionUtil.getUser(request);
         if(userVo == null) {
             resMap.put("result", false);
             resMap.put("msg", "세션이 종료되었습니다. 다시 로그인하여 작성해주세요.");

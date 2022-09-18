@@ -2,6 +2,8 @@ package com.usefulNVersatileWeb.usefulWeb.board.controller;
 
 import com.usefulNVersatileWeb.usefulWeb.board.service.BoardService;
 import com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo;
+import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
+import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
 import com.usefulNVersatileWeb.usefulWeb.util.UrlUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +30,7 @@ public class ViewBoardController {
 
     @GetMapping(value = "/register", name = "게시판 등록, 수정 페이지")
     public String registerView(Model model, HttpServletRequest request, HttpSession session, RedirectAttributes attributes) throws Exception {
-        Object userInfo = session.getAttribute("USER");
+        UserVo userInfo = SessionUtil.getUser(request);
         HashMap<String, Object> resultMap = new HashMap<>();
         model.addAttribute("result", resultMap);
         if(userInfo == null) {

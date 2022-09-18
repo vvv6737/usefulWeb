@@ -15,6 +15,7 @@ public class SessionUtil {
         session.setAttribute(SESSION_USER_KEY, user);
         return true;
     }
+
     public static UserVo getUser(HttpServletRequest request) {
         HttpSession session = request.getSession();
         return (UserVo) session.getAttribute(SESSION_USER_KEY);

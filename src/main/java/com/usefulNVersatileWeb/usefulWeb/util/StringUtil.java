@@ -4,6 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class StringUtil {
+
     public static String sha256(String msg) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(msg.getBytes());
@@ -21,5 +22,12 @@ public class StringUtil {
             builder.append(String.format("%02x",  b));
         }
         return builder.toString();
+    }
+
+    public static Boolean emptyCheck(String text) {
+        if(text == "" || text == null) {
+            return false;
+        }
+        return true;
     }
 }

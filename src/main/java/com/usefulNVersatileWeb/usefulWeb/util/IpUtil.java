@@ -3,6 +3,7 @@ package com.usefulNVersatileWeb.usefulWeb.util;
 import javax.servlet.http.HttpServletRequest;
 
 public class IpUtil {
+
     //ip주소 가져오기
     public static String ipView(HttpServletRequest request) {
         String ip = request.getHeader("X-Forwarded-For");
