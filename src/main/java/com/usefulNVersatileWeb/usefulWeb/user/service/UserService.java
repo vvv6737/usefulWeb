@@ -1,8 +1,8 @@
 package com.usefulNVersatileWeb.usefulWeb.user.service;
 
 import com.usefulNVersatileWeb.usefulWeb.user.mapper.UserMapper;
+import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
 import com.usefulNVersatileWeb.usefulWeb.util.StringUtil;
-import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

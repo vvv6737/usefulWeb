@@ -5,12 +5,12 @@
 <mapper namespace="com.usefulNVersatileWeb.usefulWeb.user.mapper.UserMapper">
 
     <!--회원가입 아이디 체크-->
-    <select id="isUserIdCheck" parameterType="java.util.HashMap" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
+    <select id="isUserIdCheck" parameterType="java.util.HashMap" resultType="com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo">
         SELECT USER_ID as userId from USER where USER_ID = #{userId}
     </select>
 
     <!--회원가입-->
-    <insert id="addUser" parameterType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo" useGeneratedKeys="true" keyProperty="seq">
+    <insert id="addUser" parameterType="com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo" useGeneratedKeys="true" keyProperty="seq">
         INSERT INTO USER
             (`USER_ID`
           , `USER_PASSWORD`
@@ -39,7 +39,7 @@
     </insert>
 
     <!--로그인폼-->
-    <select id="loginForm" resultType="com.usefulNVersatileWeb.usefulWeb.vo.UserVo">
+    <select id="loginForm" resultType="com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo">
         SELECT USER_SEQ as seq,
                USER_ID as userId,
                USER_NAME as userName,

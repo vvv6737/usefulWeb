@@ -1,11 +1,9 @@
 package com.usefulNVersatileWeb.usefulWeb.user.controller;
 
 import com.usefulNVersatileWeb.usefulWeb.user.service.UserService;
-import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
+import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
 import com.usefulNVersatileWeb.usefulWeb.util.StringUtil;
-import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 

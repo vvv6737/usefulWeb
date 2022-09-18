@@ -1,6 +1,6 @@
 package com.usefulNVersatileWeb.usefulWeb.user.mapper;
 
-import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
+import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.usefulNVersatileWeb.usefulWeb.vo;
+package com.usefulNVersatileWeb.usefulWeb.board.vo;
 
 import lombok.Data;
 

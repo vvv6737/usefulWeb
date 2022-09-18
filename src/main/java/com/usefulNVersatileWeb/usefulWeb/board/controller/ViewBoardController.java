@@ -1,10 +1,8 @@
 package com.usefulNVersatileWeb.usefulWeb.board.controller;
 
 import com.usefulNVersatileWeb.usefulWeb.board.service.BoardService;
-import com.usefulNVersatileWeb.usefulWeb.util.IpUtil;
+import com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo;
 import com.usefulNVersatileWeb.usefulWeb.util.UrlUtil;
-import com.usefulNVersatileWeb.usefulWeb.vo.BoardVo;
-import com.usefulNVersatileWeb.usefulWeb.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

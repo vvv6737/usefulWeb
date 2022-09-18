@@ -17,7 +17,7 @@
     </select>
 
     <!--게시글 첫 등록-->
-    <insert id="addBoard" parameterType="com.usefulNVersatileWeb.usefulWeb.vo.BoardVo" keyProperty="seq">
+    <insert id="addBoard" parameterType="com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo" keyProperty="seq">
         INSERT INTO BOARD
         (`USER_SEQ`
         , `TITLE`

@@ -29,7 +29,7 @@
                         <tr th:if="${boardList.size == 0}">
                             <td colspan="3" style="text-align: center;">등록된 게시글이 없습니다.</td>
                         </tr>
-                        <tr th:unless="${boardList.size == 0}" th:each="data : ${boardList}" onclick="boardDetail(this)">
+                        <tr th:unless="${boardList.size == 0}" th:each="data : ${boardList}" th:onclick="|boardDetail(${data.get('boardSeq')})|" style="cursor: pointer;">
                             <td th:text="${data.get('boardSeq')}"></td>
                             <td th:text="${data.get('title')}"></td>
                             <td th:text="${data.get('userId') == null ? '아이디 정보없음' : data.get('userId')}"></td>
@@ -47,7 +47,12 @@
 
         <script>
             function boardDetail(obj) {
-                location.href = '/board/datail/' +  obj.children[0].textContent
+                if(obj === '' || obj === null) {
+                    alert('상세보기 오류')
+                    return
+                } else {
+                    location.href = '/board/datail/' + obj
+                }
             }
         </script>
     </th:block>

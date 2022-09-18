@@ -1,7 +1,7 @@
 package com.usefulNVersatileWeb.usefulWeb.board.service;
 
 import com.usefulNVersatileWeb.usefulWeb.board.mapper.BoardMapper;
-import com.usefulNVersatileWeb.usefulWeb.vo.BoardVo;
+import com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
