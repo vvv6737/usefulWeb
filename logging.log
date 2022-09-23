@@ -96,3 +96,49 @@
 2022-09-23 22:57:34,788 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-09-23 22:57:34,828 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
 2022-09-23 22:57:34,958 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2022-09-23 22:59:55,609 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2022-09-23 22:59:55,614 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2022-09-23 22:59:55,807 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3412 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2022-09-23 22:59:55,807 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-09-23 22:59:55,969 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-09-23 22:59:55,969 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-23 22:59:55,975 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-09-23 22:59:56,089 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.441 seconds (JVM running for 231.531)
+2022-09-23 22:59:56,288 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-23 23:00:42,177 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3412 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2022-09-23 23:00:42,177 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-09-23 23:00:42,285 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-09-23 23:00:42,285 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-23 23:00:42,291 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-09-23 23:00:42,379 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.216 seconds (JVM running for 277.821)
+2022-09-23 23:00:43,289 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-23 23:01:26,321 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-4] HikariPool-2 - Starting...
+2022-09-23 23:01:26,349 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-4] HikariPool-2 - Start completed.
+2022-09-23 23:01:43,663 INFO com.zaxxer.hikari.HikariDataSource [Thread-11] HikariPool-2 - Shutdown initiated...
+2022-09-23 23:01:43,673 INFO com.zaxxer.hikari.HikariDataSource [Thread-11] HikariPool-2 - Shutdown completed.
+2022-09-23 23:01:43,723 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3412 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2022-09-23 23:01:43,723 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-09-23 23:01:43,820 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-09-23 23:01:43,820 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-23 23:01:43,826 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-09-23 23:01:43,906 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.196 seconds (JVM running for 339.347)
+2022-09-23 23:02:16,968 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3412 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2022-09-23 23:02:16,968 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-09-23 23:02:17,078 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-09-23 23:02:17,079 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-23 23:02:17,085 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-09-23 23:02:17,181 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.23 seconds (JVM running for 372.621)
+2022-09-23 23:04:48,802 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-23 23:04:52,466 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-2] HikariPool-3 - Starting...
+2022-09-23 23:04:52,492 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-2] HikariPool-3 - Start completed.
+2022-09-23 23:08:41,891 INFO com.zaxxer.hikari.HikariDataSource [Thread-19] HikariPool-3 - Shutdown initiated...
+2022-09-23 23:08:41,895 INFO com.zaxxer.hikari.HikariDataSource [Thread-19] HikariPool-3 - Shutdown completed.
+2022-09-23 23:08:42,141 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3412 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2022-09-23 23:08:42,141 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-09-23 23:08:42,266 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-09-23 23:08:42,266 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-09-23 23:08:42,272 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-09-23 23:08:42,374 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.43 seconds (JVM running for 757.807)
+2022-09-23 23:08:42,640 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-23 23:08:42,645 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-4 - Starting...
+2022-09-23 23:08:42,666 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-4 - Start completed.
