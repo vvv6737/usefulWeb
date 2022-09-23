@@ -38,7 +38,6 @@ public class RestBoardController {
         boardVo.setSeq(userVo.getSeq());
 
         int resultInt = boardService.addBoard(boardVo);
-        System.out.println(resultInt);
         if (resultInt <= 0) {
             resMap.put("result", false);
             resMap.put("msg", "게시글이 처리되지 않았습니다.");

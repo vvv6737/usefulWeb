@@ -32,7 +32,7 @@
                         <tr th:unless="${boardList.size == 0}" th:each="data : ${boardList}" th:onclick="|boardDetail(${data.get('boardSeq')})|" style="cursor: pointer;">
                             <td th:text="${data.get('boardSeq')}"></td>
                             <td th:text="${data.get('title')}"></td>
-                            <td th:text="${data.get('userId') == null ? '아이디 정보없음' : data.get('userId')}"></td>
+                            <td th:text="${data.get('userId') == null ? '정보없음' : data.get('userId')}"></td>
                             <td th:text="${data.get('lUpdate') == null ? data.get('fUpdate') : data.get('lUpdate')}"></td>
                         </tr>
                     </tbody>

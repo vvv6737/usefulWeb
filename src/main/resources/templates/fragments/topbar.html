@@ -49,7 +49,7 @@
             <section>
                 <ul class="actions stacked">
                     <li th:if="${session.USER == null}">
-                        <a href="/user/login" class="button large fit">Log In</a>
+                        <a th:href="${'/user/login?url=' + #httpServletRequest.requestURI}" class="button large fit">Log In</a>
                     </li>
                     <div th:if="${session.USER != null}">
                         <p th:text="${session.USER.userName + '님 환영합니다.'}"></p>

@@ -23,7 +23,6 @@ public class MainController {
 
     @GetMapping(value = "/mainView", name = "메인페이지")
     public String mainView(Model model, HttpServletRequest request) throws Exception {
-        System.out.println();
         return UrlUtil.url("Main", request);
     }
 
