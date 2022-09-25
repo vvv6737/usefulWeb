@@ -18,9 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/main")
 public class MainController {
 
-    @Autowired
-    UserService userService;
-
     @GetMapping(value = "/mainView", name = "메인페이지")
     public String mainView(Model model, HttpServletRequest request) throws Exception {
         return UrlUtil.url("Main", request);
