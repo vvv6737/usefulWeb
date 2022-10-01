@@ -34,7 +34,26 @@
     </insert>
 
     <select id="boardDetail" parameterType="Integer" resultType="map">
-        select * from board
+        select
+            B.BOARD_SEQ
+             ,U.USER_NAME
+             ,B.TITLE
+             ,B.CONTENT
+             ,(CASE
+               WHEN INSTR(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+               THEN REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+               ELSE REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+            END) AS FIRST_UPDATE
+             ,(CASE
+               WHEN INSTR(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+               THEN REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+               ELSE REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+            END) AS LAST_UPDATE
+             ,B.IP
+        from
+        BOARD B
+        left join USER U
+        on U.USER_SEQ = B.USER_SEQ
         where BOARD_SEQ = #{seq}
     </select>
 

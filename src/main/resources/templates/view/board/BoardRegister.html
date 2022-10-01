@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
     <th:block layout:fragment="content">
         <section>
-            <h3>BOARD INSERT</h3>
+            <h3 th:text="${#httpServletRequest.requestURI == '/board/register' ? 'BOARD INSERT' : 'BOARD UPDATE'}">BOARD INSERT</h3>
             <form id="boardRegister">
                 <div class="row gtr-uniform">
                     <div class="col-12 col-12-xsmall">
@@ -13,6 +13,7 @@
                         <textarea name="content" placeholder="Content" rows="6" th:text="${result.get('CONTENT')}"></textarea>
                     </div>
 
+                    <!--입력부-->
                     <!--<div class="col-12">
                         <select name="demo-category" id="demo-category">
                             <option value="">- Category -</option>
@@ -36,7 +37,6 @@
                         <label for="demo-priority-high">High</label>
                     </div>
 
-
                     <div class="col-6 col-12-small">
                         <input type="checkbox" id="demo-copy" name="demo-copy">
                         <label for="demo-copy">Email me a copy</label>
@@ -57,45 +57,38 @@
             </form>
         </section>
 
-        <!-- Main -->
-        <div id="main">
+        <!--수정화면-->
+        <!--<header>
+            <div class="title">
+                <h2><a th:text="${result.get('TITLE')}"></a></h2>
+                &lt;!&ndash;<p>서브 명</p>&ndash;&gt;
+            </div>
+            <div class="meta">
+                <time class="published" th:datetime="${result.get('FIRST_UPDATE')}" th:text="${result.get('FIRST_UPDATE')}"></time>
+                <a href="#" class="author">
+                    <span class="name" th:text="${result.get('USER_NAME')}"></span>
+                    <img th:src="@{/mainAssist/images/no_user_img.png}" alt="유저 프로필 사진"/>
+                </a>
+            </div>
+        </header>
 
-            <!-- Post -->
-            <article class="post">
-                <header>
-                    <div class="title">
-                        <h2><a href="#">Magna sed adipiscing</a></h2>
-                        <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-                    </div>
-                    <div class="meta">
-                        <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                        <a href="#" class="author"><span class="name">Jane Doe</span><img
-                                src="../static/mainAssist/images/avatar.jpg" alt=""/></a>
-                    </div>
-                </header>
-                <span class="image featured"><img src="../static/mainAssist/images/pic01.jpg" alt=""/></span>
-                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
-                    placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non
-                    congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus
-                    vitae, ultricies congue gravida diam non fringilla.</p>
-                <p>Nunc quis dui scelerisque, scelerisque urna ut, dapibus orci. Sed vitae condimentum lectus, ut imperdiet
-                    quam. Maecenas in justo ut nulla aliquam sodales vel at ligula. Sed blandit diam odio, sed fringilla
-                    lectus molestie sit amet. Praesent eu tortor viverra lorem mattis pulvinar feugiat in turpis. Class
-                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce ullamcorper
-                    tellus sit amet mattis dignissim. Phasellus ut metus ligula. Curabitur nec leo turpis. Ut gravida purus
-                    quis erat pretium, sed pellentesque massa elementum. Fusce vestibulum porta augue, at mattis justo.
-                    Integer sed sapien fringilla, dapibus risus id, faucibus ante. Pellentesque mattis nunc sit amet tortor
-                    pellentesque, non placerat neque viverra. </p>
-                <footer>
-                    <ul class="stats">
-                        <li><a href="#">General</a></li>
-                        <li><a href="#" class="icon solid fa-heart">28</a></li>
-                        <li><a href="#" class="icon solid fa-comment">128</a></li>
-                    </ul>
-                </footer>
-            </article>
+        <span class="image featured"><img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/></span>
+        <p th:text="${result.get('CONTENT')}"></p>
+        <footer>
+            <ul class="stats">
+                &lt;!&ndash;나중에 만들 카테고리명&ndash;&gt;
+                &lt;!&ndash;<li><a href="#">General</a></li>&ndash;&gt;
+                <li><a class="icon solid fa-heart">1</a></li>
+                <li><a class="icon solid fa-comment">2</a></li>
+            </ul>
+        </footer>
 
-        </div>
+        <div class="col-12">
+            <ul class="actions">
+                <li><input type="button" value="Register" onclick="register()"></li>
+                <li><input type="button" value="Reset" onclick="reset()"></li>
+            </ul>
+        </div>-->
 
         <script>
             function register() {
