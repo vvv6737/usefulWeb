@@ -7,6 +7,7 @@
                 <div class="row gtr-uniform">
                     <div class="col-12 col-12-xsmall">
                         <input type="text" name="title" th:value="${result.get('TITLE')}" placeholder="Title">
+                        <input th:if="${#httpServletRequest.requestURI != '/board/register'}" type="hidden" name="userSeq" th:value="${result.get('USER_SEQ')}">
                     </div>
 
                     <div class="col-12">
@@ -46,19 +47,18 @@
                         <label for="demo-human">Not a robot</label>
                     </div>-->
 
-                    <div class="col-12">
-                        <ul class="actions">
-                            <li th:if="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Register" onclick="register()"></li>
-                            <li th:unless="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Update" onclick="updateBoard()"></li>
-                            <li><input type="button" value="Reset" onclick="reset()"></li>
-                        </ul>
-                    </div>
-
                     <!--현재시간-->
                     <!--<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>-->
-
                 </div>
             </form>
+
+            <div class="col-12">
+                <ul class="actions">
+                    <li th:if="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Register" onclick="register()"></li>
+                    <li th:unless="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Update" onclick="updateBoard()"></li>
+                    <li><input type="button" value="Reset" onclick="reset()"></li>
+                </ul>
+            </div>
         </section>
 
         <!--수정화면-->
@@ -106,6 +106,7 @@
                 });
 
                 function successResult(res) {
+                    console.log(res)
                     alert(res.msg)
                     if(res.result) location.href = '/board/list';
                 }
@@ -115,8 +116,31 @@
                 }
             }
 
+            //업데이트
             function updateBoard() {
+                const data = $('#boardRegister').serialize();
+                $.ajax({
+                    url: '/board/updateBoard',
+                    type: 'POST',
+                    data: data,
+                    success: successResult,
+                    error: errorResult
+                });
 
+                function successResult(data) {
+                    console.log(data)
+                    if(data.result) {
+                        alert(data.msg)
+                        location.href = '/board/list';
+                    } else {
+                        alert(data.msg)
+                        // location.href = '/user/login?url=' + location.pathname
+                    }
+                }
+
+                function errorResult(e) {
+                    console.log(e)
+                }
             }
 
             function reset() {

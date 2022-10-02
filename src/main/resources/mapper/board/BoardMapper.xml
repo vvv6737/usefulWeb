@@ -37,18 +37,18 @@
     <update id="updateBoard" parameterType="com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo">
         UPDATE BOARD
         SET
-            TITLE = #{title}
+            USER_SEQ = #{userSeq}
+            ,TITLE = #{title}
             ,CONTENT = #{content}
             ,LAST_UPDATE = now()
-            ,pasword = #{passward}
-            ,name = #{name}
             ,IP = #{ip}
-        WHERE USER_SEQ = #{userSeq}
+        WHERE BOARD_SEQ = #{seq}
     </update>
 
     <select id="boardDetail" parameterType="Integer" resultType="map">
         select
             B.BOARD_SEQ
+             ,B.USER_SEQ
              ,U.USER_NAME
              ,B.TITLE
              ,B.CONTENT

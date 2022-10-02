@@ -35,7 +35,7 @@ public class RestBoardController {
         String getIp = IpUtil.ipView(request);
         boardVo.setIp(getIp);
         //유저 시퀀스 저장
-        boardVo.setSeq(userVo.getSeq());
+        boardVo.setUserSeq(userVo.getSeq());
 
         int resultInt = boardService.addBoard(boardVo);
         if (resultInt <= 0) {
@@ -48,20 +48,20 @@ public class RestBoardController {
             return resMap;
         }
     }
-    
-    @PostMapping
+
+    @PostMapping(value = "/updateBoard", name = "게시판 수정 API")
     public HashMap<String, Object> updateBoard(BoardVo boardVo, HttpServletRequest request) throws Exception {
         HashMap<String, Object> resMap = new HashMap<>();
 
-        UserVo userVo = SessionUtil.getUser(request);
-        if(userVo == null) {
+        UserVo userSession = SessionUtil.getUser(request);
+        if(userSession == null) {
             resMap.put("result", false);
             resMap.put("msg", "세션이 종료되었습니다. 다시 로그인하여 작성해주세요.");
             return resMap;
         }
 
         //기존 게시판 작성자와 업데이트 할 유저 정보가 다르면 리턴
-        if(boardVo.getUserSeq() == userVo.getSeq()) {
+        if(boardVo.getUserSeq() != userSession.getSeq()) {
             resMap.put("result", false);
             resMap.put("msg", "유저 정보가 다릅니다.");
             return resMap;
@@ -71,7 +71,7 @@ public class RestBoardController {
         String getIp = IpUtil.ipView(request);
         boardVo.setIp(getIp);
         //유저 시퀀스 저장
-        boardVo.setSeq(userVo.getSeq());
+        boardVo.setSeq(userSession.getSeq());
 
         int resultInt = boardService.updateBoard(boardVo);
 
