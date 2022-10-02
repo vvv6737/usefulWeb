@@ -68,10 +68,7 @@ public class RestBoardController {
         }
 
         // ip 저장
-        String getIp = IpUtil.ipView(request);
-        boardVo.setIp(getIp);
-        //유저 시퀀스 저장
-        boardVo.setSeq(userSession.getSeq());
+        boardVo.setIp(IpUtil.ipView(request));
 
         int resultInt = boardService.updateBoard(boardVo);
 

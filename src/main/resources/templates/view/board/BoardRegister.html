@@ -8,6 +8,7 @@
                     <div class="col-12 col-12-xsmall">
                         <input type="text" name="title" th:value="${result.get('TITLE')}" placeholder="Title">
                         <input th:if="${#httpServletRequest.requestURI != '/board/register'}" type="hidden" name="userSeq" th:value="${result.get('USER_SEQ')}">
+                        <input th:if="${#httpServletRequest.requestURI != '/board/register'}" type="hidden" name="seq" th:value="${result.get('BOARD_SEQ')}">
                     </div>
 
                     <div class="col-12">
@@ -128,13 +129,14 @@
                 });
 
                 function successResult(data) {
-                    console.log(data)
                     if(data.result) {
                         alert(data.msg)
                         location.href = '/board/list';
                     } else {
                         alert(data.msg)
-                        // location.href = '/user/login?url=' + location.pathname
+                        if(data.msg.includes('세션')) {
+                            location.href = '/user/login?url=' + location.pathname
+                        }
                     }
                 }
 
