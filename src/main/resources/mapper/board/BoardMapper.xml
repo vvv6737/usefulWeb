@@ -33,6 +33,19 @@
         );
     </insert>
 
+    <!--게시글 수정-->
+    <update id="updateBoard" parameterType="com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo">
+        UPDATE BOARD
+        SET
+            TITLE = #{title}
+            ,CONTENT = #{content}
+            ,LAST_UPDATE = now()
+            ,pasword = #{passward}
+            ,name = #{name}
+            ,IP = #{ip}
+        WHERE USER_SEQ = #{userSeq}
+    </update>
+
     <select id="boardDetail" parameterType="Integer" resultType="map">
         select
             B.BOARD_SEQ

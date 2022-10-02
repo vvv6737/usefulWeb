@@ -48,10 +48,14 @@
 
                     <div class="col-12">
                         <ul class="actions">
-                            <li><input type="button" value="Register" onclick="register()"></li>
+                            <li th:if="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Register" onclick="register()"></li>
+                            <li th:unless="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Update" onclick="updateBoard()"></li>
                             <li><input type="button" value="Reset" onclick="reset()"></li>
                         </ul>
                     </div>
+
+                    <!--현재시간-->
+                    <!--<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>-->
 
                 </div>
             </form>
@@ -109,6 +113,10 @@
                 function errorResult(e) {
                     console.log(e)
                 }
+            }
+
+            function updateBoard() {
+
             }
 
             function reset() {
