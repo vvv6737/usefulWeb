@@ -71,7 +71,6 @@ public class RestBoardController {
         boardVo.setIp(IpUtil.ipView(request));
 
         int resultInt = boardService.updateBoard(boardVo);
-
         if (resultInt <= 0) {
             resMap.put("result", false);
             resMap.put("msg", "게시글이 처리되지 않았습니다.");
