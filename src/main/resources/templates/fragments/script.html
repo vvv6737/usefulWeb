@@ -7,6 +7,7 @@
         <script th:src="@{/mainAssist/js/util.js}"></script>
         <script th:src="@{/mainAssist/js/main.js}"></script>
         <script>
+            //순수 바닐라 ajax
             function vAjax(type, url, param) {
                 //XMLHttpRequest 객체 생성
                 var xhr = new XMLHttpRequest();
@@ -27,6 +28,7 @@
                 }
             }
 
+            //jquery ajax
             function jAjax(type, url, param) {
                 $.ajax({
                     url: url,
