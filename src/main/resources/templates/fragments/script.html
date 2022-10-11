@@ -6,5 +6,44 @@
         <script th:src="@{/mainAssist/js/breakpoints.min.js}"></script>
         <script th:src="@{/mainAssist/js/util.js}"></script>
         <script th:src="@{/mainAssist/js/main.js}"></script>
+        <script>
+            function vAjax(type, url, param) {
+                //XMLHttpRequest 객체 생성
+                var xhr = new XMLHttpRequest();
+                //요청을 보낼 방식, 주소, 비동기여부 설정
+                xhr.open(type, url, param);
+                //요청 전송
+                xhr.send();
+                //통신후 작업
+                xhr.onload = () => {
+                    // //통신 성공
+                    // if (xhr.status == 200) {
+                    //     console.log(xhr.response);
+                    // } else {
+                    //     //통신 실패
+                    //     console.log(xhr);
+                    // }
+                    return xhr;
+                }
+            }
+
+            function jAjax(type, url, param) {
+                $.ajax({
+                    url: url,
+                    type: type,
+                    data: param,
+                    success: successResult,
+                    error: errorResult
+                });
+
+                function successResult(result) {
+                    return result;
+                }
+
+                function errorResult(e) {
+                    return e;
+                }
+            }
+        </script>
     </th:block>
 </html>
