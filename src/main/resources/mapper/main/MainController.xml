@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usefulNVersatileWeb.usefulWeb.main.mapper.MainMapper">
+
+    <select id="mainBoradList" resultType="map">
+        select
+            b.BOARD_SEQ as boardSeq
+             ,b.TITLE as title
+             ,b.CONTENT as content
+             ,DATE_FORMAT(b.FIRST_UPDATE,'%Y-%m-%d') as fUpdate
+             ,DATE_FORMAT(b.LAST_UPDATE,'%Y-%m-%d') as lUpdate
+             ,u.USER_ID as userId
+        from BOARD b
+        left join user u
+        on b.USER_SEQ = u.USER_SEQ
+    </select>
+
+</mapper>

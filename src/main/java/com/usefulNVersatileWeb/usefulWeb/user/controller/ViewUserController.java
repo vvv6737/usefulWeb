@@ -53,7 +53,7 @@ public class ViewUserController {
     @GetMapping(value = "/user/logout", name = "로그아웃")
     public String logout(HttpSession session, String url) {
         session.removeAttribute("USER");
-        url = url == null ? "/main/mainView" : url;
+        url = url == null ? "/mapper/main/mainView" : url;
         return "redirect:" + url;
     }
 
