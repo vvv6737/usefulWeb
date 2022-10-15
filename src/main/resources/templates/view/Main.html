@@ -10,26 +10,28 @@
                 </form>
             </section>
 
-            <article class="post">
+            <article class="post" th:each="data : ${mainList}">
                 <header>
                     <div class="title">
-                        <h2><a href="#">게시물 1</a></h2>
-                        <p>부제목 1</p>
+                        <h2><a href="#" th:text="${data.title}"></a></h2>
+                        <p>부제</p>
                     </div>
-
                     <div class="meta">
-                        <time class="published" datetime="2015-11-01">2022.08.21</time>
+                        <time class="published" th:text="${data.lUpdate == null ? data.fUpdate : data.lUpdate}"></time>
                         <a href="#" class="author">
-                            <span class="name">작성자</span>
-                            <img src="images/avatar.jpg" alt=""/>
+                            <span class="name" th:text="${data.userId}"></span>
+                            <!--<img th:src="@{/mainAssist/images/avatar.jpg}" alt="유저 프로필 사진"/>-->
+                            <img th:src="@{/mainAssist/images/no_user_img.png}" alt="유저 프로필 사진"/>
                         </a>
                     </div>
                 </header>
-                <a href="single.html" class="image featured"><img src="images/pic01.jpg" alt=""/></a>
-                <p>간단한 내용칸</p>
+                <a href="single.html" class="image featured">
+                    <img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/>
+                </a>
+                <p th:text="${data.content}"></p>
                 <footer>
                     <ul class="actions">
-                        <li><a href="single.html" class="button large">자세히 보기</a></li>
+                        <li><a href="" class="button large">자세히 보기</a></li>
                     </ul>
                     <ul class="stats">
                         <li><a href="#">좋아요 / 댓글</a></li>
