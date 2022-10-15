@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -24,7 +25,18 @@ public class MainController {
 
     @GetMapping(value = "/mainView", name = "메인페이지")
     public String mainView(Model model, HttpServletRequest request) throws Exception {
-        model.addAttribute("mainList", mainService.mainBoradList());
+        List<HashMap<String, Object>> resultMap = mainService.mainBoradList();
+
+        for (int i = 0; i < resultMap.size(); i++) {
+            String contentText = resultMap.get(i).get("content").toString();
+            //줄바꿈 text가 있다면
+            if(contentText.contains("\r\n")) {
+                String[] text = contentText.split("\r\n");
+                resultMap.get(i).put("content", text);
+            }
+        }
+        System.out.println(resultMap);
+        model.addAttribute("mainList", resultMap);
         return UrlUtil.url("Main", request);
     }
 
