@@ -36,7 +36,6 @@ public class MainController {
                 resultMap.get(i).put("contentArr", text);
             }
         }
-        System.out.println(resultMap);
         model.addAttribute("mainList", resultMap);
         return UrlUtil.url("Main", request);
     }
