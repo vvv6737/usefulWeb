@@ -29,8 +29,8 @@
                     <img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/>
                 </a>
 
-                <p th:if="${#strings.contains(data.content, '[')}" th:text="${data.content}"></p>
-                <p th:unless="${#strings.contains(data.content, '[')}" th:text="${data.content}"></p>
+                <p th:if="${data.get('contentArr') == null}" th:text="${data.content}"></p>
+                <p th:unless="${data.get('contentArr') == null}" th:each="arr, i : ${data.get('contentArr')}" th:text="${arr}"></p>
 
                 <footer>
                     <ul class="actions">

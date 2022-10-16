@@ -33,7 +33,7 @@ public class MainController {
             //줄바꿈 text가 있다면
             if(contentText.contains("\r\n")) {
                 List<String> text = Arrays.asList(contentText.split("\r\n"));
-                resultMap.get(i).put("content", text);
+                resultMap.get(i).put("contentArr", text);
             }
         }
         System.out.println(resultMap);
