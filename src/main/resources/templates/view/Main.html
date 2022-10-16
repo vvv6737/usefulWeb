@@ -25,15 +25,16 @@
                         </a>
                     </div>
                 </header>
-                <a href="single.html" class="image featured">
+                <a href="#" class="image featured">
                     <img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/>
                 </a>
 
-                <p th:text="${data.content}"></p>
+                <p th:if="${#strings.contains(data.content, '[')}" th:text="${data.content}"></p>
+                <p th:unless="${#strings.contains(data.content, '[')}" th:text="${data.content}"></p>
 
                 <footer>
                     <ul class="actions">
-                        <li><a href="" class="button large">자세히 보기</a></li>
+                        <li><a th:href="${'/board/datail/' + data.boardSeq}" class="button large">자세히 보기</a></li>
                     </ul>
                     <ul class="stats">
                         <li><a href="#">좋아요 / 댓글</a></li>

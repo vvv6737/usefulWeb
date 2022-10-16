@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class MainController {
             String contentText = resultMap.get(i).get("content").toString();
             //줄바꿈 text가 있다면
             if(contentText.contains("\r\n")) {
-                String[] text = contentText.split("\r\n");
+                List<String> text = Arrays.asList(contentText.split("\r\n"));
                 resultMap.get(i).put("content", text);
             }
         }
