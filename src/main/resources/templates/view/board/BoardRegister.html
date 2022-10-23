@@ -63,7 +63,7 @@
         </section>
 
         <!--수정화면-->
-        <!--<header>
+        <header>
             <div class="title">
                 <h2><a th:text="${result.get('TITLE')}"></a></h2>
                 <p>서브 명</p>
@@ -81,19 +81,21 @@
         <p th:text="${result.get('CONTENT')}"></p>
         <footer>
             <ul class="stats">
-                &lt;!&ndash;나중에 만들 카테고리명&ndash;&gt;
-                <li><a href="#">General</a></li>
+                <li><a href="#">Info</a></li>
                 <li><a class="icon solid fa-heart">1</a></li>
                 <li><a class="icon solid fa-comment">2</a></li>
             </ul>
         </footer>
 
-        <div class="col-12">
+        <div class="col-10">
+            <textarea name="" rows="2" placeholder="reply"></textarea>
+        </div>
+        <div class="col-2">
             <ul class="actions">
-                <li><input type="button" value="Register" onclick="register()"></li>
-                <li><input type="button" value="Reset" onclick="reset()"></li>
+                <li><input type="button" value="registration"></li>
+                <li><input type="button" value="Reset"></li>
             </ul>
-        </div>-->
+        </div>
 
         <script>
             function register() {
