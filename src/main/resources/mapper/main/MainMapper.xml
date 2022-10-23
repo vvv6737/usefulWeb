@@ -9,12 +9,21 @@
             b.BOARD_SEQ as boardSeq
              ,b.TITLE as title
              ,b.CONTENT as content
-             ,DATE_FORMAT(b.FIRST_UPDATE,'%Y-%m-%d') as fUpdate
-             ,DATE_FORMAT(b.LAST_UPDATE,'%Y-%m-%d') as lUpdate
+             ,IFNULL((CASE
+                      WHEN INSTR(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+                          THEN REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+                      ELSE REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+                    END),
+                    (CASE
+                      WHEN INSTR(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+                          THEN REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+                      ELSE REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+                     END)) as uploadDate
              ,u.USER_ID as userId
         from BOARD b
         left join user u
         on b.USER_SEQ = u.USER_SEQ
+        order by FIRST_UPDATE desc limit 5
     </select>
 
 </mapper>

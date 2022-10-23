@@ -33,7 +33,7 @@
                             <td th:text="${data.get('boardSeq')}"></td>
                             <td th:text="${data.get('title')}"></td>
                             <td th:text="${data.get('userId') == null ? '정보없음' : data.get('userId')}"></td>
-                            <td th:text="${data.get('lUpdate') == null ? data.get('fUpdate') : data.get('lUpdate')}"></td>
+                            <td th:text="${data.get('uploadDate')}"></td>
                         </tr>
                     </tbody>
                 </table>
