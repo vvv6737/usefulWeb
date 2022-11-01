@@ -24,8 +24,15 @@ public class StringUtil {
         return builder.toString();
     }
 
-    public static Boolean emptyCheck(String text) {
+    public static Boolean strNullCheck(String text) {
         if(text == "" || text == null) {
+            return false;
+        }
+        return true;
+    }
+
+    public static Boolean objNullCheck(Object obj) {
+        if(obj == "" || obj == null) {
             return false;
         }
         return true;
