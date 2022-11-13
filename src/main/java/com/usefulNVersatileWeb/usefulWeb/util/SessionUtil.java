@@ -1,6 +1,5 @@
 package com.usefulNVersatileWeb.usefulWeb.util;
 
-
 import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
 
 import javax.servlet.http.HttpServletRequest;
