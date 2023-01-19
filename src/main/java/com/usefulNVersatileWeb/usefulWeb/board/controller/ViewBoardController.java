@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.thymeleaf.exceptions.TemplateInputException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -21,6 +22,8 @@ public class ViewBoardController {
 
     @Autowired
     BoardService boardService;
+
+    public static final String ERRORPAGE = "error/ErrorPage";
 
     @GetMapping(value = "/list", name = "게시판 목록")
     public String mainView(Model model, BoardVo boardVo, HttpServletRequest request) throws Exception {
@@ -41,9 +44,19 @@ public class ViewBoardController {
     }
 
     @GetMapping(value = "/datail/{seq}", name = "게시판 상세 페이지")
-    public String boardDetail(@PathVariable int seq, Model model) throws Exception {
-        HashMap<String, Object> resultMap = boardService.boardDetail(seq);
-        model.addAttribute("result", resultMap);
+    public String boardDetail(@PathVariable int seq, Model model) {
+        try {
+            HashMap<String, Object> resultMap = boardService.boardDetail(seq);
+            model.addAttribute("result", resultMap);
+        } catch (TemplateInputException e) {
+            String errorMsg = "템플릿에러! : " + e;
+            model.addAttribute("errorMsg", errorMsg);
+            return ERRORPAGE;
+        } catch (Exception e) {
+            String errorMsg = "알수없는 에러! : " + e;
+            model.addAttribute("errorMsg", errorMsg);
+            return ERRORPAGE;
+        }
         return "/view/board/BoardRegister";
     }
 

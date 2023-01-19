@@ -10,7 +10,6 @@
                         <input th:if="${#httpServletRequest.requestURI != '/board/register'}" type="hidden" name="userSeq" th:value="${result.get('USER_SEQ')}">
                         <input th:if="${#httpServletRequest.requestURI != '/board/register'}" type="hidden" name="seq" th:value="${result.get('BOARD_SEQ')}">
                     </div>
-
                     <div class="col-12">
                         <textarea name="content" placeholder="Content" rows="6" th:text="${result.get('CONTENT')}"></textarea>
                     </div>
@@ -78,7 +77,11 @@
         </header>
 
         <span class="image featured"><img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/></span>
-        <p th:text="${result.get('CONTENT')}"></p>
+        <!--내용 줄바꿈이 있는경우-->
+        <p th:if="${result.get('contentArr') == null}" th:text="${result.get('CONTENT')}"></p>
+        <!--내용 줄바꿈이 없는경우-->
+        <p th:each="data : ${result.get('contentArr')}" th:text="${data}"></p>
+
         <footer>
             <ul class="stats">
                 <li><a href="#">Info</a></li>
@@ -87,7 +90,7 @@
             </ul>
         </footer>
 
-        <div class="col-10">
+        <div class="col-10" style="margin-bottom: 10px;">
             <textarea name="" rows="2" placeholder="reply"></textarea>
         </div>
         <div class="col-2">

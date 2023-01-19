@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
+    <th:block layout:fragment="content">
+        <section>
+            <h3>Error!</h3>
+            <p th:text="${errorMsg}"></p>
+        </section>
+    </th:block>
+</html>

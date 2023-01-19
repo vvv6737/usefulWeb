@@ -41,12 +41,11 @@ public class RestBoardController {
         if (resultInt <= 0) {
             resMap.put("result", false);
             resMap.put("msg", "게시글이 처리되지 않았습니다.");
-            return resMap;
         } else {
             resMap.put("result", true);
             resMap.put("msg", "게시글이 처리되었습니다.");
-            return resMap;
         }
+        return resMap;
     }
 
     @PostMapping(value = "/updateBoard", name = "게시판 수정 API")
