@@ -23,7 +23,7 @@ public class BoardService {
         return boardMapper.addBoard(boardVo);
     }
 
-    public HashMap<String, Object> boardDetail(int seq) throws Exception {
+    public HashMap<String, Object> boardDetail(int seq) {
         HashMap<String, Object> resMap = boardMapper.boardDetail(seq);
 
         if(resMap.get("CONTENT") != null) {

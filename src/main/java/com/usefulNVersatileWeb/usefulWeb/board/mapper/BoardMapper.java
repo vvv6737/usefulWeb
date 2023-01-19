@@ -15,7 +15,7 @@ public interface BoardMapper {
     //게시글 추가
     int addBoard(BoardVo boardVo) throws Exception;
 
-    HashMap<String, Object> boardDetail(int seq) throws Exception;
+    HashMap<String, Object> boardDetail(int seq);
 
     //게시글 수정, 삭제
     int updateBoard(BoardVo boardVo) throws Exception;

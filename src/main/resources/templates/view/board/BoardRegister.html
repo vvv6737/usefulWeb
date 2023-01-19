@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
     <th:block layout:fragment="content">
-        <section>
+        <!--<section>
+            &lt;!&ndash;리뉴얼 전 상세/업데이트 화면&ndash;&gt;
             <h3 th:text="${#httpServletRequest.requestURI == '/board/register' ? 'BOARD INSERT' : 'BOARD UPDATE'}">BOARD INSERT</h3>
             <form id="boardRegister">
                 <div class="row gtr-uniform">
@@ -14,8 +15,8 @@
                         <textarea name="content" placeholder="Content" rows="6" th:text="${result.get('CONTENT')}"></textarea>
                     </div>
 
-                    <!--입력부-->
-                    <!--<div class="col-12">
+                    &lt;!&ndash;입력부&ndash;&gt;
+                    &lt;!&ndash;<div class="col-12">
                         <select name="demo-category" id="demo-category">
                             <option value="">- Category -</option>
                             <option value="1">Manufacturing</option>
@@ -45,10 +46,10 @@
                     <div class="col-6 col-12-small">
                         <input type="checkbox" id="demo-human" name="demo-human" checked="">
                         <label for="demo-human">Not a robot</label>
-                    </div>-->
+                    </div>&ndash;&gt;
 
-                    <!--현재시간-->
-                    <!--<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>-->
+                    &lt;!&ndash;현재시간&ndash;&gt;
+                    &lt;!&ndash;<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>&ndash;&gt;
                 </div>
             </form>
 
@@ -59,9 +60,9 @@
                     <li><input type="button" value="Reset" onclick="reset()"></li>
                 </ul>
             </div>
-        </section>
+        </section>-->
 
-        <!--수정화면-->
+        <!--리뉴얼 후 상세 화면-->
         <header>
             <div class="title">
                 <h2><a th:text="${result.get('TITLE')}"></a></h2>

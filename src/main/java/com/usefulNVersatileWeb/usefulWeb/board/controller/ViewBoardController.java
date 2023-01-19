@@ -23,7 +23,7 @@ public class ViewBoardController {
     @Autowired
     BoardService boardService;
 
-    public static final String ERRORPAGE = "error/ErrorPage";
+    public static final String ERRORPAGE = "/view/error/ErrorPage";
 
     @GetMapping(value = "/list", name = "게시판 목록")
     public String mainView(Model model, BoardVo boardVo, HttpServletRequest request) throws Exception {
@@ -48,10 +48,13 @@ public class ViewBoardController {
         try {
             HashMap<String, Object> resultMap = boardService.boardDetail(seq);
             model.addAttribute("result", resultMap);
+
         } catch (TemplateInputException e) {
             String errorMsg = "템플릿에러! : " + e;
+            System.out.println(errorMsg);
             model.addAttribute("errorMsg", errorMsg);
             return ERRORPAGE;
+
         } catch (Exception e) {
             String errorMsg = "알수없는 에러! : " + e;
             model.addAttribute("errorMsg", errorMsg);
