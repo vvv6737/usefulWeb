@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.List;
 
 @Controller
 @RequestMapping("/main")
@@ -31,5 +33,11 @@ public class MainController {
     public String naverNews(HttpServletRequest req) {
         naverNewsApi naverNewsApi = new naverNewsApi();
         return naverNewsApi.search(req.getParameter("searchData"));
+    }
+
+    @ResponseBody
+    @PostMapping(value = "/commonMainRecentBoard",  name = "탑 사이드바 목록")
+    public List<HashMap<String, Object>> commonMainRecentBoard() throws Exception {
+        return mainService.mainBoradList();
     }
 }

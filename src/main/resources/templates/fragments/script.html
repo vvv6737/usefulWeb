@@ -48,7 +48,27 @@
             }
 
 
-            console.log(12312312)
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/main/commonMainRecentBoard",
+                    type: "POST",
+                    success: successResult,
+                    error: errorResult
+                });
+
+                function successResult(res) {
+                    console.log(res)
+
+                    let gethtml =
+
+
+                }
+
+                function errorResult(e) {
+                    console.log(e)
+                }
+            })
+            window.onload = console.log(123123);
         </script>
     </th:block>
 </html>
