@@ -47,7 +47,7 @@
                 }
             }
 
-
+            // 로그인버튼 위 공통 게시판 리스트
             $(document).ready(function () {
                 $.ajax({
                     url: "/main/commonMainRecentBoard",
@@ -55,20 +55,26 @@
                     success: successResult,
                     error: errorResult
                 });
-
                 function successResult(res) {
-                    console.log(res)
-
-                    let gethtml =
-
-
+                    if(res.length > 0) {
+                        for (let i = 0; i < res.length; i++) {
+                            let appHtml = `
+                                        <ul class="links">
+                                            <li>
+                                                <a href="${'/board/detail/' + res[i].boardSeq}">
+                                                    <h3>${res[i].title}</h3>
+                                                    <p>${res[i].uploadDate}</p>
+                                                </a>
+                                            </li>
+                                        </ul>`
+                            $('#commonRecentBoard').append(appHtml);
+                        }
+                    }
                 }
-
                 function errorResult(e) {
                     console.log(e)
                 }
             })
-            window.onload = console.log(123123);
         </script>
     </th:block>
 </html>

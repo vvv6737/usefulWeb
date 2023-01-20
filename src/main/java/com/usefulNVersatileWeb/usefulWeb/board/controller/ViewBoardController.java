@@ -43,7 +43,7 @@ public class ViewBoardController {
         return UrlUtil.url("board/BoardRegister", request);
     }
 
-    @GetMapping(value = "/datail/{seq}", name = "게시판 상세 페이지")
+    @GetMapping(value = "/detail/{seq}", name = "게시판 상세 페이지")
     public String boardDetail(@PathVariable int seq, Model model) {
         try {
             HashMap<String, Object> resultMap = boardService.boardDetail(seq);
