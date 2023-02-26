@@ -2,6 +2,7 @@ package com.usefulNVersatileWeb.usefulWeb.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Map;
 
 public class StringUtil {
 
@@ -36,5 +37,10 @@ public class StringUtil {
             return false;
         }
         return true;
+    }
+
+//    map을 queryString으로 변환한다.
+    public String formatQueryParams(Map<String, Object> params) {
+        return null;
     }
 }
