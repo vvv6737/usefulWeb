@@ -96,7 +96,7 @@
         </div>
         <div class="col-2">
             <ul class="actions">
-                <li><input type="button" value="registration"></li>
+                <li><input type="button" value="registration" onclick="replySet()"></li>
                 <li><input type="button" value="Reset" onclick="replyReset()"></li>
             </ul>
         </div>
@@ -157,6 +157,11 @@
 
             function replyReset() {
                 document.getElementById('replyReset').value = ''
+            }
+
+            function replySet(){
+                alert('댓글 적용 완료!');
+                location.reload();
             }
         </script>
     </th:block>
