@@ -7,9 +7,10 @@ import org.springframework.context.annotation.PropertySource;
 public class JasyptConfigTest {
     public static void main(String[] args) {
 
-        String url = "jdbc:postgresql://localhost:5432/postgres";
-        String username = "postgres";
-        String password = "1234";
+//        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String url = "jdbc:mysql://localhost:3306/park_web_project_db?useUnicode=true&characterEncoding=utf-8";
+        String username = "jeong_hoon_park";
+        String password = "park12345";
 
         String encryptUrl = jasyptEncrypt(url);
         String encryptUsername = jasyptEncrypt(username);
