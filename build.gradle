@@ -38,6 +38,9 @@ dependencies {
 	implementation 'org.apache.directory.studio:org.apache.commons.codec:1.8'
 	implementation group: 'org.springframework', name: 'spring-web', version: '5.3.21'
 
+	implementation group: 'org.bgee.log4jdbc-log4j2', name:'log4jdbc-log4j2-jdbc4.1', version: '1.16'
+	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.3'
+
 	implementation group: 'commons-io', name: 'commons-io', version: '2.6'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
