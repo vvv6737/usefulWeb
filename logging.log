@@ -937,3 +937,116 @@ Consider the following:
 2023-04-24 19:55:57,323 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-04-24 19:55:57,344 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
 2023-04-24 19:55:57,478 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2023-04-24 19:57:49,444 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-04-24 19:57:49,450 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-04-24 19:57:49,492 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 9472 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 19:57:49,492 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 19:57:49,591 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 19:57:49,592 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 19:57:49,596 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 19:57:49,602 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 19:57:49,602 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 19:57:49,624 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 19:57:49,624 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 19:57:49,631 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 19:57:49,657 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@518bbd09 with name: jasyptStringEncryptor
+2023-04-24 19:57:49,747 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.267 seconds (JVM running for 118.071)
+2023-04-24 19:59:21,892 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 9472 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 19:59:21,893 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 19:59:22,006 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 19:59:22,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 19:59:22,009 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 19:59:22,015 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 19:59:22,015 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 19:59:22,033 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 19:59:22,033 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 19:59:22,039 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 19:59:22,060 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@1998d2f6 with name: jasyptStringEncryptor
+2023-04-24 19:59:22,147 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.405 seconds (JVM running for 210.471)
+2023-04-24 20:01:56,504 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 9655 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 20:01:56,505 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 20:01:56,945 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 20:01:56,955 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 20:01:56,955 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:01:56,955 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:01:56,956 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:01:56,956 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 20:01:56,956 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:01:56,956 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:01:56,956 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:01:56,969 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 20:01:57,041 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 20:01:57,042 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 20:01:57,153 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 20:01:57,153 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 20:01:57,184 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 20:01:57,254 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@7af2c01c with name: jasyptStringEncryptor
+2023-04-24 20:01:57,582 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.207 seconds (JVM running for 1.495)
+2023-04-24 20:02:03,159 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 9690 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 20:02:03,160 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 20:02:03,601 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 20:02:03,611 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:02:03,612 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:02:03,630 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 20:02:03,698 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 20:02:03,699 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 20:02:03,800 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 20:02:03,800 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 20:02:03,830 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 20:02:03,896 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@18678c3e with name: jasyptStringEncryptor
+2023-04-24 20:02:03,912 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-04-24 20:02:03,930 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.datasource.url' to java.lang.String:
+
+    Reason: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.datasource.url' to java.lang.String
+
+Action:
+
+Update your application's configuration
+
+2023-04-24 20:02:36,717 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 9725 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 20:02:36,717 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 20:02:37,179 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 20:02:37,188 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 20:02:37,188 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:02:37,188 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:02:37,188 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:02:37,189 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 20:02:37,189 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 20:02:37,189 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:02:37,189 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 20:02:37,202 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 20:02:37,277 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 20:02:37,277 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 20:02:37,380 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 20:02:37,380 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 20:02:37,414 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 20:02:37,481 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@7af2c01c with name: jasyptStringEncryptor
+2023-04-24 20:02:37,806 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.224 seconds (JVM running for 1.507)
