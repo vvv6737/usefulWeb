@@ -1,15 +1,24 @@
-2023-04-19 00:17:55,072 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [main] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3428 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
-2023-04-19 00:17:55,075 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [main] No active profile set, falling back to 1 default profile: "default"
-2023-04-19 00:17:55,705 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2023-04-19 00:17:55,705 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
-2023-04-19 00:17:55,753 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2023-04-19 00:17:55,797 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
-2023-04-19 00:17:55,814 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restBoardController': Unsatisfied dependency expressed through field 'boardService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardMapper' defined in file [/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main/com/usefulNVersatileWeb/usefulWeb/board/mapper/BoardMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+2023-04-24 18:37:05,091 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 6013 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:37:05,094 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:37:05,576 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:37:05,587 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:37:05,587 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:37:05,587 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:37:05,587 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:37:05,588 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:37:05,588 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:37:05,588 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:37:05,588 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:37:05,603 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:37:05,697 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:37:05,698 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:37:05,824 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:37:05,824 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:37:05,859 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:37:05,988 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-04-24 18:37:06,009 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jasyptConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jasypt.encryptor.password' in value "${jasypt.encryptor.password}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
@@ -27,235 +36,78 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
 	at com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication.main(UsefulWebApplication.java:9)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardMapper' defined in file [/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main/com/usefulNVersatileWeb/usefulWeb/board/mapper/BoardMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
-	... 20 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardMapper' defined in file [/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main/com/usefulNVersatileWeb/usefulWeb/board/mapper/BoardMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
-	... 34 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
-	... 47 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 57 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 71 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 85 common frames omitted
-Caused by: java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.util.Assert.state(Assert.java:97)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:171)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:123)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 86 common frames omitted
-2023-04-19 00:18:49,147 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [main] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3468 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
-2023-04-19 00:18:49,148 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [main] No active profile set, falling back to 1 default profile: "default"
-2023-04-19 00:18:49,617 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
-2023-04-19 00:18:49,617 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
-2023-04-19 00:18:49,656 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
-2023-04-19 00:18:49,703 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
-2023-04-19 00:18:49,718 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restBoardController': Unsatisfied dependency expressed through field 'boardService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardMapper' defined in file [/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main/com/usefulNVersatileWeb/usefulWeb/board/mapper/BoardMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication.main(UsefulWebApplication.java:9)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardMapper' defined in file [/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main/com/usefulNVersatileWeb/usefulWeb/board/mapper/BoardMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jasypt.encryptor.password' in value "${jasypt.encryptor.password}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
 	... 20 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardMapper' defined in file [/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main/com/usefulNVersatileWeb/usefulWeb/board/mapper/BoardMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
-	... 34 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
-	... 47 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 57 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 71 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 85 common frames omitted
-Caused by: java.lang.IllegalStateException: Cannot load driver class: com.mysql.jdbc.Driver
-	at org.springframework.util.Assert.state(Assert.java:97)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:171)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:123)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 86 common frames omitted
-2023-04-19 00:22:14,077 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 3503 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
-2023-04-19 00:22:14,078 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2023-04-19 00:22:14,604 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-04-19 00:22:14,604 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
-2023-04-19 00:22:14,631 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-04-19 00:22:14,995 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.036 seconds (JVM running for 1.279)
-2023-04-19 00:22:22,421 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-19 00:22:22,441 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
-2023-04-19 00:22:22,577 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
-2023-04-19 00:29:17,787 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2023-04-19 00:29:17,791 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2023-04-19 19:16:47,880 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+2023-04-24 18:38:10,826 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 6033 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:38:10,826 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:38:11,285 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:38:11,294 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:38:11,295 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:38:11,308 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:38:11,386 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:38:11,386 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:38:11,497 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:38:11,498 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:38:11,530 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:38:11,944 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.263 seconds (JVM running for 1.564)
+2023-04-24 18:39:14,309 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 6033 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:39:14,309 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:39:14,401 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:39:14,401 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:39:14,401 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:39:14,401 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:39:14,402 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:39:14,402 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:39:14,402 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:39:14,402 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:39:14,402 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:39:14,405 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:39:14,411 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:39:14,412 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:39:14,433 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:39:14,433 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:39:14,439 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:39:14,551 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.258 seconds (JVM running for 64.171)
+2023-04-24 18:39:36,698 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 6134 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:39:36,699 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:39:37,155 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:39:37,164 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:39:37,165 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:39:37,182 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:39:37,255 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:39:37,256 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:39:37,368 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:39:37,368 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:39:37,403 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:39:37,475 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-04-24 18:39:37,496 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -263,26 +115,33 @@ APPLICATION FAILED TO START
 
 Description:
 
-Failed to bind properties under 'logging.level.jdbc.sqlonly' to org.springframework.boot.logging.LogLevel:
+Failed to bind properties under 'spring.datasource.password' to java.lang.String:
 
-    Property: logging.level.jdbc.sqlonly
-    Value: on
-    Origin: class path resource [application.properties] - 58:28
-    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.on)
+    Reason: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'jasyptStringEncryptor': Requested bean is currently in creation: Is there an unresolvable circular reference?
 
 Action:
 
-Update your application's configuration. The following values are valid:
+Update your application's configuration
 
-    DEBUG
-    ERROR
-    FATAL
-    INFO
-    OFF
-    TRACE
-    WARN
-
-2023-04-19 19:17:18,647 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+2023-04-24 18:41:20,796 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 6144 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:41:20,797 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:41:21,229 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:41:21,238 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:41:21,239 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:41:21,251 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:41:21,328 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:41:21,328 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:41:21,454 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:41:21,455 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:41:21,487 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:41:21,554 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-04-24 18:41:21,574 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -290,26 +149,33 @@ APPLICATION FAILED TO START
 
 Description:
 
-Failed to bind properties under 'logging.level.jdbc.audit' to org.springframework.boot.logging.LogLevel:
+Failed to bind properties under 'spring.datasource.password' to java.lang.String:
 
-    Property: logging.level.jdbc.audit
-    Value: on
-    Origin: class path resource [application.properties] - 61:26
-    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.on)
+    Reason: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'jasyptStringEncryptor': Requested bean is currently in creation: Is there an unresolvable circular reference?
 
 Action:
 
-Update your application's configuration. The following values are valid:
+Update your application's configuration
 
-    DEBUG
-    ERROR
-    FATAL
-    INFO
-    OFF
-    TRACE
-    WARN
-
-2023-04-19 19:17:27,638 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+2023-04-24 18:41:29,251 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 6150 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:41:29,252 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:41:32,369 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:41:32,512 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:41:32,517 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:41:32,518 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:41:32,520 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:41:32,522 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:41:32,522 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:41:32,522 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:41:32,523 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:41:32,788 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:41:33,794 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:41:33,802 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:41:36,506 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:41:36,507 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:41:37,239 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:41:38,802 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-04-24 18:41:39,104 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -317,26 +183,35 @@ APPLICATION FAILED TO START
 
 Description:
 
-Failed to bind properties under 'logging.level.jdbc.resultset' to org.springframework.boot.logging.LogLevel:
+Failed to bind properties under 'spring.datasource.password' to java.lang.String:
 
-    Property: logging.level.jdbc.resultset
-    Value: on
-    Origin: class path resource [application.properties] - 62:30
-    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.on)
+    Reason: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'jasyptStringEncryptor': Requested bean is currently in creation: Is there an unresolvable circular reference?
 
 Action:
 
-Update your application's configuration. The following values are valid:
+Update your application's configuration
 
-    DEBUG
-    ERROR
-    FATAL
-    INFO
-    OFF
-    TRACE
-    WARN
-
-2023-04-19 19:17:39,684 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+2023-04-24 18:44:05,411 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 7970 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:44:05,412 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:44:05,876 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:44:05,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:05,887 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:05,900 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:44:05,980 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:44:05,980 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:44:06,091 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:44:06,091 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:44:06,131 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:44:06,196 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2023-04-24 18:44:06,198 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2023-04-24 18:44:06,201 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-04-24 18:44:06,223 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -344,60 +219,101 @@ APPLICATION FAILED TO START
 
 Description:
 
-Failed to bind properties under 'logging.level.jdbc.connection' to org.springframework.boot.logging.LogLevel:
+Failed to bind properties under 'spring.datasource.password' to java.lang.String:
 
-    Property: logging.level.jdbc.connection
-    Value: on
-    Origin: class path resource [application.properties] - 63:31
-    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.on)
+    Reason: java.lang.IllegalStateException: either 'jasypt.encryptor.password' or one of ['jasypt.encryptor.private-key-string', 'jasypt.encryptor.private-key-location'] must be provided for Password-based or Asymmetric encryption
 
 Action:
 
-Update your application's configuration. The following values are valid:
+Update your application's configuration
 
-    DEBUG
-    ERROR
-    FATAL
-    INFO
-    OFF
-    TRACE
-    WARN
-
-2023-04-19 19:17:47,210 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 4196 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
-2023-04-19 19:17:47,211 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2023-04-19 19:17:47,847 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-04-19 19:17:47,848 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
-2023-04-19 19:17:47,877 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-04-19 19:17:48,266 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.198 seconds (JVM running for 1.47)
-2023-04-19 19:17:51,005 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-19 19:17:51,024 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
-2023-04-19 19:17:51,168 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
-2023-04-19 19:23:32,462 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2023-04-19 19:23:32,466 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2023-04-19 19:23:34,209 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to bind properties under 'logging.level.jdbc.sqlonly' to org.springframework.boot.logging.LogLevel:
-
-    Property: logging.level.jdbc.sqlonly
-    Value: on
-    Origin: class path resource [application.properties] - 58:28
-    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.on)
-
-Action:
-
-Update your application's configuration. The following values are valid:
-
-    DEBUG
-    ERROR
-    FATAL
-    INFO
-    OFF
-    TRACE
-    WARN
-
+2023-04-24 18:44:13,523 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 7982 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:44:13,524 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:44:13,963 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:44:13,972 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:13,973 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:13,986 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:44:14,062 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:44:14,062 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:44:14,166 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:44:14,167 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:44:14,197 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:44:14,606 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.213 seconds (JVM running for 1.507)
+2023-04-24 18:44:23,207 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8020 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:44:23,207 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:44:23,750 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:44:23,759 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:44:23,759 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:23,759 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:23,759 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:23,760 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:44:23,760 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:44:23,760 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:23,760 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:44:23,773 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:44:23,852 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:44:23,852 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:44:23,961 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:44:23,961 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:44:24,001 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:44:24,389 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.337 seconds (JVM running for 1.643)
+2023-04-24 18:45:04,868 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8020 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:45:04,868 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:45:04,984 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:45:04,985 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:45:04,989 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:45:04,995 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:45:04,995 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:45:05,017 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:45:05,017 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:45:05,023 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:45:05,148 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.274 seconds (JVM running for 42.401)
+2023-04-24 18:46:41,365 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8020 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:46:41,366 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:46:41,457 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:46:41,458 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:46:41,461 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:46:41,466 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:46:41,467 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:46:41,488 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:46:41,488 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:46:41,494 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:46:41,604 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.256 seconds (JVM running for 138.857)
+2023-04-24 18:48:06,307 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8020 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-04-24 18:48:06,307 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:48:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-04-24 18:48:06,393 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-04-24 18:48:06,398 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-04-24 18:48:06,398 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-04-24 18:48:06,417 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-04-24 18:48:06,417 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-04-24 18:48:06,423 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-04-24 18:48:06,526 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.233 seconds (JVM running for 223.779)

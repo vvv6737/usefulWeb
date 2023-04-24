@@ -16,12 +16,19 @@ public class JasyptConfigTest {
         String encryptUsername = jasyptEncrypt(username);
         String encryptPassword = jasyptEncrypt(password);
 
+//        String deUrl = jasyptDecryt(url);
+//        String deUsername = jasyptDecryt(username);
+//        String dePassword = jasyptDecryt(password);
+
         System.out.println("encryptUrl : " + encryptUrl);
         System.out.println("encryptUsername : " + encryptUsername);
-        System.out.println("encryptPassword" + encryptPassword);
+        System.out.println("encryptPassword : " + encryptPassword);
+
+//        System.out.println("deUrl : " + deUrl);
+//        System.out.println("deUsername : " + deUsername);
+//        System.out.println("dePassword : " + dePassword);
 
 //        Assertions.assertThat(url).isEqualTo(jasyptDecryt(encryptUrl));
-
     }
 
     private static String jasyptEncrypt(String input) {
