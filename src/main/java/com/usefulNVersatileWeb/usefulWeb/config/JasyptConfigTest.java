@@ -1,49 +1,32 @@
 package com.usefulNVersatileWeb.usefulWeb.config;
 
-import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
-import org.springframework.context.annotation.PropertySource;
+import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
+import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
+import org.springframework.beans.factory.annotation.Value;
 
-@PropertySource("classpath:application.properties")
 public class JasyptConfigTest {
+
     public static void main(String[] args) {
+        aa();
 
-//        String url = "jdbc:postgresql://localhost:5432/postgres";
-        String url = "jdbc:mysql://localhost:3306/park_web_project_db?useUnicode=true&characterEncoding=utf-8";
-        String username = "jeong_hoon_park";
-        String password = "park12345";
+        PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
+        SimpleStringPBEConfig config = new SimpleStringPBEConfig();
+        config.setPassword("23432492384823974289");
+        config.setPoolSize("1");
+        config.setAlgorithm("PBEWithMD5AndDES");
+        config.setStringOutputType("base64");
+        config.setKeyObtentionIterations("1000");
+        config.setSaltGeneratorClassName("org.jasypt.salt.RandomSaltGenerator");
+        encryptor.setConfig(config);
 
-        String encryptUrl = jasyptEncrypt(url);
-        String encryptUsername = jasyptEncrypt(username);
-        String encryptPassword = jasyptEncrypt(password);
-
-//        String deUrl = jasyptDecryt(url);
-//        String deUsername = jasyptDecryt(username);
-//        String dePassword = jasyptDecryt(password);
-
-        System.out.println("encryptUrl : " + encryptUrl);
-        System.out.println("encryptUsername : " + encryptUsername);
-        System.out.println("encryptPassword : " + encryptPassword);
-
-//        System.out.println("deUrl : " + deUrl);
-//        System.out.println("deUsername : " + deUsername);
-//        System.out.println("dePassword : " + dePassword);
-
-//        Assertions.assertThat(url).isEqualTo(jasyptDecryt(encryptUrl));
+        System.out.println(encryptor.encrypt("jdbc:mysql://localhost:3306/park_web_project_db?autoReconnect=true"));
     }
 
-    private static String jasyptEncrypt(String input) {
-        String key = "5678";
-        StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-        encryptor.setAlgorithm("PBEWithMD5AndDES");
-        encryptor.setPassword(key);
-        return encryptor.encrypt(input);
+    @Value("${jasypt.encryptor.bean}")
+    private static String a;
+    public static String aa() {
+        System.out.println(a);
+        return a;
     }
 
-    private static String jasyptDecryt(String input){
-        String key = "5678";
-        StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-        encryptor.setAlgorithm("PBEWithMD5AndDES");
-        encryptor.setPassword(key);
-        return encryptor.decrypt(input);
-    }
 }
