@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
     <th:block layout:fragment="content">
-        <!--<section>
-            &lt;!&ndash;리뉴얼 전 상세/업데이트 화면&ndash;&gt;
+        <section>
+            <!--리뉴얼 전 상세/업데이트 화면-->
             <h3 th:text="${#httpServletRequest.requestURI == '/board/register' ? 'BOARD INSERT' : 'BOARD UPDATE'}">BOARD INSERT</h3>
             <form id="boardRegister">
                 <div class="row gtr-uniform">
@@ -15,7 +15,7 @@
                         <textarea name="content" placeholder="Content" rows="6" th:text="${result.get('CONTENT')}"></textarea>
                     </div>
 
-                    &lt;!&ndash;입력부&ndash;&gt;
+                    <!--&lt;!&ndash;입력부&ndash;&gt;
                     &lt;!&ndash;<div class="col-12">
                         <select name="demo-category" id="demo-category">
                             <option value="">- Category -</option>
@@ -49,7 +49,7 @@
                     </div>&ndash;&gt;
 
                     &lt;!&ndash;현재시간&ndash;&gt;
-                    &lt;!&ndash;<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>&ndash;&gt;
+                    &lt;!&ndash;<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>&ndash;&gt;-->
                 </div>
             </form>
 
@@ -60,7 +60,7 @@
                     <li><input type="button" value="Reset" onclick="reset()"></li>
                 </ul>
             </div>
-        </section>-->
+        </section>
 
         <!--리뉴얼 후 상세 화면-->
         <header>
@@ -135,7 +135,7 @@
                 });
 
                 function successResult(data) {
-                    if(data.result) {
+                    if(data.result == 11000) {
                         alert(data.msg)
                         location.href = '/board/list';
                     } else {

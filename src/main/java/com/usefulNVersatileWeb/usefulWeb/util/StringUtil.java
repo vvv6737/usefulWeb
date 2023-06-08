@@ -42,7 +42,7 @@ public class StringUtil {
         return true;
     }
 
-//    map을 queryString으로 변환한다.
+    //map을 queryString으로 변환한다.
     public static String formatQueryParams(Map<String, Object> params) {
         return params.entrySet().stream().map(p -> p.getKey() + "=" + p.getValue())
                 .reduce((p1, p2) -> p1 + "&" + p2)

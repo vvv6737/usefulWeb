@@ -168,3 +168,323 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view
 2023-06-08 17:48:47,174 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-06-08 17:48:47,198 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
 2023-06-08 17:48:47,342 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2023-06-08 18:28:07,811 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-08 18:28:07,814 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-06-08 18:28:10,513 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8544 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-06-08 18:28:10,513 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:28:10,997 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-06-08 18:28:11,007 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:28:11,008 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:28:11,022 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-06-08 18:28:11,103 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-06-08 18:28:11,103 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-06-08 18:28:11,228 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-08 18:28:11,228 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-06-08 18:28:11,268 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-08 18:28:11,340 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@1f601fb0 with name: jasyptStringEncryptor
+2023-06-08 18:28:11,717 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.359 seconds (JVM running for 1.657)
+2023-06-08 18:28:14,240 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:28:14,256 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
+2023-06-08 18:28:14,396 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2023-06-08 18:34:30,393 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-06-08 18:34:30,465 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-06-08 18:34:30,544 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8544 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-06-08 18:34:30,544 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:34:30,671 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:34:30,672 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:34:30,677 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-06-08 18:34:30,687 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-06-08 18:34:30,687 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-06-08 18:34:30,732 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-08 18:34:30,732 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-06-08 18:34:30,740 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-08 18:34:30,771 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@6df9300f with name: jasyptStringEncryptor
+2023-06-08 18:34:30,903 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.386 seconds (JVM running for 380.854)
+2023-06-08 18:34:31,316 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:34:31,321 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-2 - Starting...
+2023-06-08 18:34:31,336 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-2 - Start completed.
+2023-06-08 18:34:59,920 ERROR org.thymeleaf.TemplateEngine [http-nio-7777-exec-8] [THYMELEAF][http-nio-7777-exec-8] Exception processing template "/view/board/BoardRegister": Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2023-06-08 18:34:59,923 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-7777-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2023-06-08 18:35:00,143 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown initiated...
+2023-06-08 18:35:00,146 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown completed.
+2023-06-08 18:35:03,021 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8663 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-06-08 18:35:03,021 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:35:03,488 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-06-08 18:35:03,497 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:35:03,498 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:35:03,511 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-06-08 18:35:03,585 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-06-08 18:35:03,585 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-06-08 18:35:03,703 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-08 18:35:03,703 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-06-08 18:35:03,742 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-08 18:35:03,818 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@791279ae with name: jasyptStringEncryptor
+2023-06-08 18:35:04,183 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.317 seconds (JVM running for 1.621)
+2023-06-08 18:35:06,007 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:35:06,029 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
+2023-06-08 18:35:06,176 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2023-06-08 18:35:29,053 ERROR org.thymeleaf.TemplateEngine [http-nio-7777-exec-1] [THYMELEAF][http-nio-7777-exec-1] Exception processing template "/view/board/BoardRegister": Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-08 18:35:29,055 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-7777-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/view/board/BoardRegister], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-08 18:35:29,094 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-08 18:35:29,145 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-06-08 18:35:30,840 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8697 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-06-08 18:35:30,841 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:35:31,386 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-06-08 18:35:31,396 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:35:31,397 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:35:31,411 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-06-08 18:35:31,494 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-06-08 18:35:31,495 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-06-08 18:35:31,608 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-08 18:35:31,608 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-06-08 18:35:31,651 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-08 18:35:31,727 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@284665c5 with name: jasyptStringEncryptor
+2023-06-08 18:35:32,108 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 1.433 seconds (JVM running for 1.737)
+2023-06-08 18:35:33,480 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:35:33,506 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Starting...
+2023-06-08 18:35:33,647 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-1 - Start completed.
+2023-06-08 18:37:21,179 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-06-08 18:37:21,186 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-06-08 18:37:21,257 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Starting UsefulWebApplication using Java 18.0.2.1 on HoonsMac.local with PID 8697 (/Users/hoon/Desktop/git/usefulWeb/build/classes/java/main started by hoon in /Users/hoon/Desktop/git/usefulWeb)
+2023-06-08 18:37:21,257 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:37:21,352 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-06-08 18:37:21,356 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-06-08 18:37:21,363 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-06-08 18:37:21,363 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-06-08 18:37:21,384 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-06-08 18:37:21,384 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-06-08 18:37:21,391 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-08 18:37:21,421 INFO com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor [restartedMain] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@10f1231a with name: jasyptStringEncryptor
+2023-06-08 18:37:21,522 INFO com.usefulNVersatileWeb.usefulWeb.UsefulWebApplication [restartedMain] Started UsefulWebApplication in 0.284 seconds (JVM running for 111.154)
+2023-06-08 18:37:23,399 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-08 18:37:24,047 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-2 - Starting...
+2023-06-08 18:37:24,062 INFO com.zaxxer.hikari.HikariDataSource [http-nio-7777-exec-1] HikariPool-2 - Start completed.

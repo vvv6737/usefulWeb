@@ -5,15 +5,18 @@ import java.util.Map;
 
 public class ResponseUtil {
 
-    public static Map<String, Object> succsessResponse(String msg) {
-        Map<String, Object> resMap = new HashMap<>();
-        resMap.put("result", true);
+    final static int successCode = 11000;
+    final static int failCode = 30000;
+
+    public static HashMap<String, Object> successResponse(String msg) {
+        HashMap<String, Object> resMap = new HashMap<>();
+        resMap.put("result", successCode);
         resMap.put("msg", msg);
         return resMap;
     }
-    public static Map<String, Object> failResponse(String msg) {
-        Map<String, Object> resMap = new HashMap<>();
-        resMap.put("result", false);
+    public static HashMap<String, Object> failResponse(int code, String msg) {
+        HashMap<String, Object> resMap = new HashMap<>();
+        resMap.put("result", failCode + code);
         resMap.put("msg", msg);
         return resMap;
     }
