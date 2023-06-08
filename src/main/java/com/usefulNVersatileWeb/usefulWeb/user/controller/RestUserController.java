@@ -19,33 +19,18 @@ public class RestUserController {
 
     @PostMapping(value = "/isIdCheck", name = "회원가입 ID체크")
     public Boolean isIdCheck(UserVo userVo, HttpSession session) throws Exception {
-        if(userService.isUserIdCheck(userVo).size() == 0) {
-            session.setAttribute("isIdCheck", true);
-            return true;
-        } else {
-            return false;
-        }
+        return userService.isUserIdCheck(userVo, session);
     }
 
     @PostMapping(value =  "/addUser", name = "회원가입")
     public Boolean addUser(HttpSession session, UserVo userVO, RedirectAttributes attributes) throws Exception{
+        boolean res = false;
         try {
-            //아이디 체크를 하였는지.
-            Boolean chk = (Boolean) session.getAttribute("isIdCheck");
-            if(chk) {
-                String password = userVO.getUserPassword();
-                String shaPass = null;
-                shaPass = StringUtil.sha256(password);
-                userVO.setUserPassword(shaPass);
-                userService.AddUser(userVO);
-                return true;
-            } else {
-                return false;
-            }
+            res = userService.AddUser(userVO, session);
         } catch (NoSuchAlgorithmException e) {
             attributes.addFlashAttribute("msg", "회원가입 에러");
-            return false;
+            return res;
         }
+        return res;
     }
-
 }
