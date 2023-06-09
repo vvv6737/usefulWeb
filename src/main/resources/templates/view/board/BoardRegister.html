@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymelaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/singleLayout}">
     <th:block layout:fragment="content">
-        <section>
-            <!--리뉴얼 전 상세/업데이트 화면-->
+        <section id="boardUpadte" style="display: none;">
+            <!--업데이트 화면-->
             <h3 th:text="${#httpServletRequest.requestURI == '/board/register' ? 'BOARD INSERT' : 'BOARD UPDATE'}">BOARD INSERT</h3>
             <form id="boardRegister">
                 <div class="row gtr-uniform">
@@ -63,7 +63,7 @@
         </section>
 
         <!--리뉴얼 후 상세 화면-->
-        <header>
+        <header class="boardDetail">
             <div class="title">
                 <h2><a th:text="${result.get('TITLE')}"></a></h2>
                 <p>서브 명</p>
@@ -77,7 +77,9 @@
             </div>
         </header>
 
-        <span class="image featured"><img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/></span>
+        <span class="image featured">
+            <img th:src="@{/mainAssist/images/pic01.jpg}" alt=""/>
+        </span>
         <!--내용 줄바꿈이 있는경우-->
         <p th:if="${result.get('contentArr') == null}" th:text="${result.get('CONTENT')}"></p>
         <!--내용 줄바꿈이 없는경우-->
@@ -86,8 +88,6 @@
         <footer>
             <ul class="stats">
                 <li><a href="#">Info</a></li>
-                <li><a class="icon solid fa-heart">1</a></li>
-                <li><a class="icon solid fa-comment">2</a></li>
             </ul>
         </footer>
 
@@ -102,6 +102,23 @@
         </div>
 
         <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: '/reply/list',
+                    type: 'GET',
+                    success: function (res) {
+                        console.log(res)
+                        let html = `
+                            <li><a class="icon solid fa-heart">not developed</a></li>
+                            <li><a class="icon solid fa-comment">${res.length}</a></li>`;
+                        $('.stats').append(html);
+                    },
+                    error: function (e) {
+                        console.log(e)
+                    }
+                });
+            })
+
             function register() {
                 const data = $('#boardRegister').serialize();
                 $.ajax({
