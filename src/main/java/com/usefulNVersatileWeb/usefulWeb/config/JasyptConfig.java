@@ -8,18 +8,32 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
+import java.io.FileReader;
+import java.io.IOException;
+
 @Component
 @Configuration
 public class JasyptConfig {
 
-    @Value("${jasypt.encryptor.key}")
-    private String KEY;
+//    @Value("${jasypt.encryptor.key}")
+//    private String KEY;
+
+    private static String key() throws IOException{
+        String path = System.getProperty("user.dir");
+        String key2 = "";
+        FileReader reader = new FileReader(path + "/../../../Downloads/usefulWebJasyptKey.txt");
+        int ch;
+        while ((ch = reader.read()) != -1) {
+            key2 = key2 + (char) ch;
+        }
+        return key2;
+    }
 
     @Bean("jasyptStringEncryptor")
-    public StringEncryptor stringEncryptor(){
+    public StringEncryptor stringEncryptor() throws IOException {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
-        config.setPassword(KEY);
+        config.setPassword(key());
         config.setPoolSize("1");
         config.setAlgorithm("PBEWithMD5AndDES");
         config.setStringOutputType("base64");
