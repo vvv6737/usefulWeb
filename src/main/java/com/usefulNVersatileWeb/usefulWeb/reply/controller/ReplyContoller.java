@@ -1,6 +1,8 @@
 package com.usefulNVersatileWeb.usefulWeb.reply.controller;
 
+import com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,9 +21,24 @@ public class ReplyContoller {
 
         for (int i = 0; i < 10; i++) {
             Map<String, Object> map = new HashMap<>();
-            map.put(""+i, "댓글데이터 " + i);
+            map.put("replySeq", i+1);
+            map.put("userSeq", i);
+            map.put("boardSeq", i);
+            map.put("replyContent", "와웅!"+i);
+            map.put("firstUpdate", "2021.01.01");
+            map.put("lastUpadte", "2021.01.01");
             list.add(map);
         }
         return list;
+    }
+
+    @PostMapping(value = "/insert", name = "댓글 입력")
+    public List<Map<String, Object>> registerInsert(ReplyVo replyVo) {
+        return null;
+    }
+
+    @PostMapping(value = "/update", name = "댓글 수정")
+    public List<Map<String, Object>> registerUpdate(ReplyVo replyVo) {
+        return null;
     }
 }
