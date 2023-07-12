@@ -1,10 +1,9 @@
 package com.usefulNVersatileWeb.usefulWeb.reply.controller;
 
 import com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import groovy.util.logging.Log4j;
+import groovy.util.logging.Slf4j;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
