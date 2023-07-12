@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usefulNVersatileWeb.usefulWeb.reply.mapper.ReplyMapper">
+
+    <!--댓글 목록-->
+    <select id="replyList" parameterType="map" resultType="map">
+        SELECT
+            REPLAY_SEQ
+            ,USER_SEQ
+            ,BOARD_SEQ
+            ,REPLAY_CONTENT
+            ,IFNULL((CASE
+                  WHEN INSTR(DATE_FORMAT(LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+                  THEN REPLACE(DATE_FORMAT(LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+                  ELSE REPLACE(DATE_FORMAT(LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+            END),
+             (CASE
+                  WHEN INSTR(DATE_FORMAT(FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+                  THEN REPLACE(DATE_FORMAT(FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+                  ELSE REPLACE(DATE_FORMAT(FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+                 END)) as UPLOAD_DATE
+        FROM REPLY
+        WHERE BOARD_SEQ = #{boardSeq}
+        ORDER BY FIRST_UPDATE DESC
+    </select>
+
+    <insert id="replyInsert" parameterType="map">
+        INSERT INTO (
+            USER_SEQ
+            ,BOARD_SEQ
+            ,REPLAY_CONTENT
+            ,FIRST_UPDATE
+            ,LAST_UPDATE
+        ) VALUES (
+            #{userSeq}
+            ,#{BOARD_SEQ}
+            ,#{REPLAY_CONTENT}
+            ,NOW()
+            ,NOW()
+        )
+    </insert>
+
+
+</mapper>

@@ -165,32 +165,36 @@
                 $.ajax({
                     url: '/reply/list',
                     type: 'GET',
+                    data : {
+                        'boardSeq' : [[${result.get('BOARD_SEQ')}]],
+                    },
                     success: function (res) {
-                        console.log(res)
                         let html = `
                             <li><a class="icon solid fa-heart">not developed</a></li>
                             <li><a class="icon solid fa-comment">${res.length}</a></li>`;
                         $('.stats').append(html);
 
-                        for (let i = 0; i < res.length; i++) {
-                            let replyHtml = `
+                        if(res.length !== 0) {
+                            for (let i = 0; i < res.length; i++) {
+                                let replyHtml = `
                                 <hr>
                                 <div class="row">
                                     <div class="col-6 col-12-medium">
                                         <h3>reply</h3>
-                                        <p>${res[i].replyContent}</p>
+                                        <p>${res[i].REPLAY_CONTENT}</p>
                                     </div>
                                     <div class="col-6 col-12-medium">
                                         <ul class="alt">
-                                            <li>${res[i].lastUpadte}</li>
+                                            <li>${res[i].UPLOAD_DATE}</li>
                                         </ul>
                                         <ul class="actions">
-                                            <li><input type="button" value="수정" onclick="test1(${res[i].replySeq})"></li>
-                                            <li><input type="button" value="삭제" onclick="test2(${res[i].replySeq})"></li>
+                                            <li><input type="button" value="수정" onclick="test1(${res[i].REPLAY_SEQ})"></li>
+                                            <li><input type="button" value="삭제" onclick="test2(${res[i].REPLAY_SEQ})"></li>
                                         </ul>
                                     </div>
                                 </div>`
-                            $('#replyData').append(replyHtml);
+                                $('#replyData').append(replyHtml);
+                            }
                         }
                     },
                     error: function (e) {
