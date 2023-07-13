@@ -143,7 +143,7 @@
 
         <div style="display: none;" class="boardDetail">
             <div class="col-10" style="margin-bottom: 10px;">
-                <textarea id="replyReset" name="" rows="2" placeholder="reply"></textarea>
+                <textarea id="replyContent" name="" rows="2" placeholder="reply"></textarea>
             </div>
             <div class="col-2">
                 <ul class="actions">
@@ -162,6 +162,16 @@
 
         <script>
             $(document).ready(function () {
+                showReply();
+                if('/board/register' === location.pathname){
+                    $('#boardUpadte').show()
+                } else {
+                    $('.boardDetail').show()
+                }
+            })
+
+            //게시글 상세 댓글 조회
+            function showReply() {
                 $.ajax({
                     url: '/reply/list',
                     type: 'GET',
@@ -201,13 +211,7 @@
                         console.log(e)
                     }
                 });
-
-                if('/board/register' === location.pathname){
-                    $('#boardUpadte').show()
-                } else {
-                    $('.boardDetail').show()
-                }
-            })
+            }
 
             function register() {
                 const data = $('#boardRegister').serialize();
@@ -263,7 +267,7 @@
             }
 
             function replyReset() {
-                document.getElementById('replyReset').value = ''
+                document.getElementById('replyContent').value = ''
             }
 
             function boardUpdate() {
@@ -272,8 +276,30 @@
             }
 
             function replySet(){
-                alert('댓글 적용 완료!');
-                location.reload();
+                let replyContent = document.getElementById('replyContent').value
+
+                let param = {
+                    'boardSeq' : [[${result.get('BOARD_SEQ')}]],
+                    'replyContent' : replyContent
+                }
+
+                if(jsonIsValue(param)) {
+                    $.ajax({
+                        url: '/reply/insert',
+                        type: 'POST',
+                        data : param,
+                        success: function (res) {
+                            console.log(res);
+                            alert('댓글 적용 완료!');
+                            showReply();
+                        },
+                        error: function (e) {
+                            console.log(e)
+                        }
+                    });
+                } else {
+                    alert('댓글 내용이 없습니다!');
+                }
             }
         </script>
     </th:block>

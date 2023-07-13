@@ -75,6 +75,20 @@
                     console.log(e)
                 }
             })
+
+            //json파라미터의 값이 하나라도 빈값이거나 null일경우 false
+            function jsonIsValue(json) {
+                let arr = [];
+                for(var i in json)
+                    arr.push([i, json [i]]);
+
+                for (let i = 0; i < arr.length; i++) {
+                    if(arr[i][1] === null || arr[i][1] === '') {
+                        return false;
+                    }
+                }
+                return true;
+            }
         </script>
     </th:block>
 </html>

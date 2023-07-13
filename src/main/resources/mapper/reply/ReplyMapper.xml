@@ -35,8 +35,8 @@
             ,LAST_UPDATE
         ) VALUES (
             #{userSeq}
-            ,#{BOARD_SEQ}
-            ,#{REPLAY_CONTENT}
+            ,#{boardSeq}
+            ,#{replyContent}
             ,NOW()
             ,NOW()
         )

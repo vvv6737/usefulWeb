@@ -4,6 +4,9 @@ import com.usefulNVersatileWeb.usefulWeb.reply.service.ReplyService;
 import com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +23,11 @@ public class ReplyContoller {
     }
 
     @PostMapping(value = "/insert", name = "댓글 입력")
-    public List<Map<String, Object>> registerInsert(ReplyVo replyVo) {
+    public Map<String, Object> registerInsert(HttpServletRequest request, HttpSession session, ReplyVo replyVo) {
+        System.out.println(request);
+        System.out.println();
+        System.out.println(session);
+        System.out.println(replyVo);
         return null;
     }
 
