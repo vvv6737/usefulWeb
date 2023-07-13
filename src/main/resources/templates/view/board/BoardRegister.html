@@ -159,15 +159,16 @@
         <section class="boardDetail" id="replyData" style="display: none;margin-bottom: 20px;"></section>
 
 
-
         <script>
             $(document).ready(function () {
-                showReply();
-                if('/board/register' === location.pathname){
+                getBoradSeq();
+                if('/board/register' === location.pathname){ //게시글 입력창인경우
                     $('#boardUpadte').show()
-                } else {
+
+                } else { //게시글 상세보기인경우
                     $('.boardDetail').show()
                 }
+                showReply();
             })
 
             //게시글 상세 댓글 조회
@@ -176,9 +177,12 @@
                     url: '/reply/list',
                     type: 'GET',
                     data : {
-                        'boardSeq' : [[${result.get('BOARD_SEQ')}]],
+                        'boardSeq' : boradSeq,
                     },
                     success: function (res) {
+                        // replyData태그 초기화
+                        document.getElementById('replyData').innerHTML = '';
+
                         let html = `
                             <li><a class="icon solid fa-heart">not developed</a></li>
                             <li><a class="icon solid fa-comment">${res.length}</a></li>`;
@@ -190,7 +194,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-6 col-12-medium">
-                                        <h3>reply</h3>
+                                        <h3>${res[i].USER_NAME}</h3>
                                         <p>${res[i].REPLAY_CONTENT}</p>
                                     </div>
                                     <div class="col-6 col-12-medium">
@@ -203,7 +207,7 @@
                                         </ul>
                                     </div>
                                 </div>`
-                                $('#replyData').html(replyHtml);
+                                $('#replyData').append(replyHtml);
                             }
                         }
                     },
@@ -212,6 +216,16 @@
                     }
                 });
             }
+
+            let boradSeq;
+            function getBoradSeq() {
+                if($('[name=seq]')[0] === undefined){
+                    boradSeq = '';
+                } else {
+                    boradSeq = $('[name=seq]')[0].value;
+                }
+            }
+
 
             function register() {
                 const data = $('#boardRegister').serialize();
@@ -277,9 +291,8 @@
 
             function replySet(){
                 let replyContent = document.getElementById('replyContent').value
-
                 let param = {
-                    'boardSeq' : [[${result.get('BOARD_SEQ')}]],
+                    'boardSeq' : boradSeq,
                     'replyContent' : replyContent
                 }
 

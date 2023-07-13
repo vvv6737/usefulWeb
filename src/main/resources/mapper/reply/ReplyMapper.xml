@@ -7,21 +7,24 @@
     <!--댓글 목록-->
     <select id="replyList" parameterType="map" resultType="map">
         SELECT
-            REPLAY_SEQ
-            ,USER_SEQ
-            ,BOARD_SEQ
-            ,REPLAY_CONTENT
-            ,IFNULL((CASE
-                  WHEN INSTR(DATE_FORMAT(LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
-                  THEN REPLACE(DATE_FORMAT(LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
-                  ELSE REPLACE(DATE_FORMAT(LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+            R.REPLAY_SEQ
+             ,U.USER_SEQ
+             ,U.USER_NAME
+             ,R.BOARD_SEQ
+             ,R.REPLAY_CONTENT
+             ,IFNULL((CASE
+                      WHEN INSTR(DATE_FORMAT(R.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+                      THEN REPLACE(DATE_FORMAT(R.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+                      ELSE REPLACE(DATE_FORMAT(R.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
             END),
              (CASE
-                  WHEN INSTR(DATE_FORMAT(FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
-                  THEN REPLACE(DATE_FORMAT(FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
-                  ELSE REPLACE(DATE_FORMAT(FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
+                  WHEN INSTR(DATE_FORMAT(R.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
+                  THEN REPLACE(DATE_FORMAT(R.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
+                  ELSE REPLACE(DATE_FORMAT(R.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
                  END)) as UPLOAD_DATE
-        FROM REPLY
+        FROM REPLY R
+                 LEFT JOIN USER U
+                           ON R.USER_SEQ = U.USER_SEQ
         WHERE BOARD_SEQ = #{boardSeq}
         ORDER BY FIRST_UPDATE DESC
     </select>
