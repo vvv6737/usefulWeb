@@ -26,8 +26,8 @@
         ORDER BY FIRST_UPDATE DESC
     </select>
 
-    <insert id="replyInsert" parameterType="map">
-        INSERT INTO (
+    <insert id="replyInsert" parameterType="com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo">
+        INSERT INTO REPLY(
             USER_SEQ
             ,BOARD_SEQ
             ,REPLAY_CONTENT

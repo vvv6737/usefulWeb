@@ -182,7 +182,7 @@
                         let html = `
                             <li><a class="icon solid fa-heart">not developed</a></li>
                             <li><a class="icon solid fa-comment">${res.length}</a></li>`;
-                        $('.stats').append(html);
+                        $('.stats').html(html);
 
                         if(res.length !== 0) {
                             for (let i = 0; i < res.length; i++) {
@@ -203,7 +203,7 @@
                                         </ul>
                                     </div>
                                 </div>`
-                                $('#replyData').append(replyHtml);
+                                $('#replyData').html(replyHtml);
                             }
                         }
                     },
@@ -290,10 +290,18 @@
                         data : param,
                         success: function (res) {
                             console.log(res);
-                            alert('댓글 적용 완료!');
-                            showReply();
+                            if(res.result === 30100) {
+                                alert(res.msg);
+                                location.href = location.origin + '/user/login?url=' + location.pathname
+                            } else if(res.result === 30200) {
+                                alert(res.msg);
+                            } else if (res.result === 11000){
+                                alert('댓글 적용 완료!');
+                                showReply();
+                            }
                         },
                         error: function (e) {
+                            alert('댓글 등록중 오류가 발생하였습니다.');
                             console.log(e)
                         }
                     });

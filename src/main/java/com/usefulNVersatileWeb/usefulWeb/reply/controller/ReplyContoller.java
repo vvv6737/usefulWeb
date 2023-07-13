@@ -2,6 +2,8 @@ package com.usefulNVersatileWeb.usefulWeb.reply.controller;
 
 import com.usefulNVersatileWeb.usefulWeb.reply.service.ReplyService;
 import com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo;
+import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
+import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,12 +25,8 @@ public class ReplyContoller {
     }
 
     @PostMapping(value = "/insert", name = "댓글 입력")
-    public Map<String, Object> registerInsert(HttpServletRequest request, HttpSession session, ReplyVo replyVo) {
-        System.out.println(request);
-        System.out.println();
-        System.out.println(session);
-        System.out.println(replyVo);
-        return null;
+    public Map<String, Object> registerInsert(HttpServletRequest request, ReplyVo replyVo) {
+        return replyService.replyInsert(request, replyVo);
     }
 
     @PostMapping(value = "/update", name = "댓글 수정")
