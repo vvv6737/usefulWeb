@@ -1,7 +1,6 @@
 package com.usefulNVersatileWeb.usefulWeb.util;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class ResponseUtil {
 
