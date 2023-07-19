@@ -6,10 +6,10 @@
 
 # 사용 언어
 - Java
+- JS
 
 # 프론트
 - Thymeleaf Template
-- JS
 
 # 프레임워크 
 - Spring Boot
