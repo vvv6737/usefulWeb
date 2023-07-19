@@ -45,5 +45,18 @@
         )
     </insert>
 
+    <update id="replyUpdate" parameterType="com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo">
+        UPDATE REPLY SET
+            REPLAY_CONTENT = #{replyContent}
+            ,LAST_UPDATE = NOW()
+        WHERE REPLAY_SEQ = #{replySeq}
+          AND USER_SEQ = #{userSeq}
+          AND BOARD_SEQ = #{boardSeq}
+    </update>
+
+    <delete id="replyDelete" parameterType="com.usefulNVersatileWeb.usefulWeb.reply.vo.ReplyVo">
+        DELETE FROM REPLY
+        WHERE REPLAY_SEQ = #{replySeq}
+    </delete>
 
 </mapper>

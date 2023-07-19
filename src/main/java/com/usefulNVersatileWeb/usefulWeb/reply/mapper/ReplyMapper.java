@@ -12,4 +12,8 @@ public interface ReplyMapper {
     List<Map<String, Object>> replyList(Map<String, Object> param);
 
     int replyInsert(ReplyVo replyVo);
+
+    int replyUpdate(ReplyVo replyVo);
+
+    int replyDelete(ReplyVo replyVo);
 }

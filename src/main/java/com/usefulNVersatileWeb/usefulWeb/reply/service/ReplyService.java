@@ -24,20 +24,45 @@ public class ReplyService {
 
     public Map<String, Object> replyInsert(HttpServletRequest request, ReplyVo replyVo) {
         UserVo userVo = SessionUtil.getUser(request);
-
         //로그인하지 않았을경우
         if(userVo == null) {
-            return ResponseUtil.failResponse(100, "로그인후 댓글입력이 가능합니다.");
+            return ResponseUtil.failResponse(100, "로그인 후 댓글입력이 가능합니다.");
         }
 
-        //유저시퀀스 입력
+        //유저시퀀스 셋팅
         replyVo.setUserSeq(userVo.getSeq());
-        System.out.println("replyVo : " + replyVo);
-
         int result = replyMapper.replyInsert(replyVo);
         if (result <= 0) {
             return ResponseUtil.failResponse(200, "댓글입력이 처리되지 않았습니다.");
         }
         return ResponseUtil.successResponse("댓글입력이 처리되었습니다.");
+    }
+
+    public Map<String, Object> replyUpdate(HttpServletRequest request, ReplyVo replyVo) {
+        UserVo userVo = SessionUtil.getUser(request);
+        //로그인하지 않았을경우
+        if(userVo == null) {
+            return ResponseUtil.failResponse(100, "로그인 후 댓글수정이 가능합니다.");
+        }
+
+        int result = replyMapper.replyUpdate(replyVo);
+        if (result <= 0) {
+            return ResponseUtil.failResponse(200, "댓글입력이 처리되지 않았습니다.");
+        }
+        return ResponseUtil.successResponse("댓글이 수정되었습니다.");
+    }
+
+    public Map<String, Object> replyDelete(HttpServletRequest request, ReplyVo replyVo) {
+        UserVo userVo = SessionUtil.getUser(request);
+        //로그인하지 않았을경우
+        if(userVo == null) {
+            return ResponseUtil.failResponse(100, "로그인 후 댓글삭제가 가능합니다.");
+        }
+
+        int result = replyMapper.replyDelete(replyVo);
+        if (result <= 0) {
+            return ResponseUtil.failResponse(200, "댓글입력이 처리되지 않았습니다.");
+        }
+        return ResponseUtil.successResponse("댓글이 삭제처리되었습니다.");
     }
 }

@@ -107,7 +107,7 @@
                 <ul class="actions">
                     <li th:if="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Register" onclick="register()"></li>
                     <li th:unless="${#httpServletRequest.requestURI == '/board/register'}"><input type="button" value="Update" onclick="updateBoard()"></li>
-                    <li><input type="button" value="Reset" onclick="reset()"></li>
+                    <li><input type="button" value="Reset" onclick="insertReset()"></li>
                 </ul>
             </div>
         </section>
@@ -202,8 +202,8 @@
                                             <li>${res[i].UPLOAD_DATE}</li>
                                         </ul>
                                         <ul class="actions">
-                                            <li><input type="button" value="수정" onclick="test1(${res[i].REPLAY_SEQ})"></li>
-                                            <li><input type="button" value="삭제" onclick="test2(${res[i].REPLAY_SEQ})"></li>
+                                            <li><input type="button" value="수정" onclick="replyUpdate(${res[i].REPLAY_SEQ})"></li>
+                                            <li><input type="button" value="삭제" onclick="replyDelete(${res[i].REPLAY_SEQ})"></li>
                                         </ul>
                                     </div>
                                 </div>`
@@ -276,7 +276,7 @@
                 }
             }
 
-            function reset() {
+            function insertReset() {
                 console.log("reset")
             }
 
@@ -289,18 +289,20 @@
                 $('.boardDetail').hide();
             }
 
+            let replyContent
+            let replyParam
             function replySet(){
-                let replyContent = document.getElementById('replyContent').value
-                let param = {
+                replyContent = document.getElementById('replyContent').value
+                replyParam = {
                     'boardSeq' : boradSeq,
                     'replyContent' : replyContent
                 }
 
-                if(jsonIsValue(param)) {
+                if(jsonIsValue(replyParam)) {
                     $.ajax({
                         url: '/reply/insert',
                         type: 'POST',
-                        data : param,
+                        data : replyParam,
                         success: function (res) {
                             console.log(res);
                             if(res.result === 30100) {
@@ -321,6 +323,41 @@
                 } else {
                     alert('댓글 내용이 없습니다!');
                 }
+            }
+
+            function replyUpdate(replySeq) {
+                console.log(replySeq)
+            }
+
+            function replyDelete(replySeq) {
+                console.log(replySeq)
+
+                if(jsonIsValue(replyParam)) {
+                    $.ajax({
+                        url: '/reply/insert',
+                        type: 'POST',
+                        data : replyParam,
+                        success: function (res) {
+                            console.log(res);
+                            if(res.result === 30100) {
+                                alert(res.msg);
+                                location.href = location.origin + '/user/login?url=' + location.pathname
+                            } else if(res.result === 30200) {
+                                alert(res.msg);
+                            } else if (res.result === 11000){
+                                alert('댓글 적용 완료!');
+                                showReply();
+                            }
+                        },
+                        error: function (e) {
+                            alert('댓글 등록중 오류가 발생하였습니다.');
+                            console.log(e)
+                        }
+                    });
+                } else {
+                    alert('댓글 내용이 없습니다!');
+                }
+
             }
         </script>
     </th:block>

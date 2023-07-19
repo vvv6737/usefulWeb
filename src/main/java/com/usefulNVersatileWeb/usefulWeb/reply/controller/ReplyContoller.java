@@ -17,17 +17,23 @@ public class ReplyContoller {
     ReplyService replyService;
 
     @GetMapping(value = "/list", name = "해당글의 댓글 조회")
-    public List<Map<String, Object>> registerView(@RequestParam Map<String, Object> param) {
+    public List<Map<String, Object>> replyView(@RequestParam Map<String, Object> param) {
         return replyService.replyList(param);
     }
 
     @PostMapping(value = "/insert", name = "댓글 입력")
-    public Map<String, Object> registerInsert(HttpServletRequest request, ReplyVo replyVo) {
+    public Map<String, Object> replyInsert(HttpServletRequest request, ReplyVo replyVo) {
         return replyService.replyInsert(request, replyVo);
     }
 
     @PostMapping(value = "/update", name = "댓글 수정")
-    public List<Map<String, Object>> registerUpdate(ReplyVo replyVo) {
-        return null;
+    public Map<String, Object> replyUpdate(HttpServletRequest request, ReplyVo replyVo) {
+        return replyService.replyUpdate(request, replyVo);
+    }
+
+
+    @PostMapping(value = "/delete", name = "댓글 삭제")
+    public Map<String, Object> replyDelete(HttpServletRequest request, ReplyVo replyVo) {
+        return replyService.replyDelete(request, replyVo);
     }
 }
