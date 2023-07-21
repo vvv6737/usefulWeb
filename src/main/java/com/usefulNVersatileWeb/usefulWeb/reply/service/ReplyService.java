@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,17 @@ public class ReplyService {
     ReplyMapper replyMapper;
 
     public List<Map<String, Object>> replyList(Map<String, Object> param) {
-        return replyMapper.replyList(param);
+        List<Map<String, Object>> result = replyMapper.replyList(param);
+        if(result.size() != 0) {
+            for (int i = 0; i < result.size(); i++) {
+                String contentText = result.get(i).get("REPLAY_CONTENT").toString();
+                if(contentText.contains("\n")){
+                    List<String> contentTextToArr = Arrays.asList(contentText.split("\n"));
+                    result.get(i).put("REPLAY_CONTENT", contentTextToArr);
+                }
+            }
+        }
+        return result;
     }
 
     public Map<String, Object> replyInsert(HttpServletRequest request, ReplyVo replyVo) {

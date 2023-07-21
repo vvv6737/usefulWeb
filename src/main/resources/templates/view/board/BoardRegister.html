@@ -189,13 +189,14 @@
                         $('.stats').html(html);
 
                         if(res.length !== 0) {
+
                             for (let i = 0; i < res.length; i++) {
                                 let replyHtml = `
                                 <hr>
                                 <div class="row">
                                     <div class="col-6 col-12-medium">
                                         <h3>${res[i].USER_NAME}</h3>
-                                        <p>${res[i].REPLAY_CONTENT}</p>
+                                        <div class="replyContent`+i+`"></div>
                                     </div>
                                     <div class="col-6 col-12-medium">
                                         <ul class="alt">
@@ -208,6 +209,19 @@
                                     </div>
                                 </div>`
                                 $('#replyData').append(replyHtml);
+
+                                // 댓글 줄바꿈처리
+                                // 배열값지 체크
+                                if(Array.isArray(res[i].REPLAY_CONTENT)) {
+                                    let replyArr
+                                    for (let j = 0; j < res[i].REPLAY_CONTENT.length; j++) {
+                                        replyArr = '<p>' + res[i].REPLAY_CONTENT[j] + '</p>' + replyArr;
+                                    }
+                                    $('.replyContent'+i).append(replyArr);
+                                } else {
+                                    let replyArr = `<p>${res[i].REPLAY_CONTENT}</p>`;
+                                    $('.replyContent'+i).append(replyArr);
+                                }
                             }
                         }
                     },
