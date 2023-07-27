@@ -171,8 +171,23 @@
                 showReply();
             })
 
-            //게시글 상세 댓글 조회
+            //게시글 상세 댓글, 좋아요 조회
             function showReply() {
+
+                //게시글 좋아요 개수 조회
+                let likeCount = 0;
+                $.ajax({
+                    url: '/like/board/' + boradSeq,
+                    type: 'GET',
+                    success: function(res) {
+                        likeCount = res;
+                    },
+                    error: function (e) {
+                        console.log(e)
+                    }
+                });
+
+                // 게시글 댓글 조회
                 $.ajax({
                     url: '/reply/list',
                     type: 'GET',
@@ -184,7 +199,7 @@
                         document.getElementById('replyData').innerHTML = '';
 
                         let html = `
-                            <li><a class="icon solid fa-heart">not developed</a></li>
+                            <li><a class="icon solid fa-heart">${likeCount}</a></li>
                             <li><a class="icon solid fa-comment">${res.length}</a></li>`;
                         $('.stats').html(html);
 
@@ -213,7 +228,7 @@
                                 // 댓글 줄바꿈처리
                                 // 배열값지 체크
                                 if(Array.isArray(res[i].REPLAY_CONTENT)) {
-                                    let replyArr
+                                    let replyArr = '';
                                     for (let j = 0; j < res[i].REPLAY_CONTENT.length; j++) {
                                         replyArr = '<p>' + res[i].REPLAY_CONTENT[j] + '</p>' + replyArr;
                                     }
@@ -371,8 +386,9 @@
                 } else {
                     alert('댓글 내용이 없습니다!');
                 }
-
             }
+
+
         </script>
     </th:block>
 </html>
