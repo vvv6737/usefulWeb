@@ -11,4 +11,30 @@
         WHERE BOARD_SEQ = #{boardSeq}
     </select>
 
+    <select id="isBoardLike" parameterType="Map" resultType="Boolean">
+        SELECT
+            IF(COUNT(*) = 1, 1, 0)
+        FROM HEART
+        WHERE BOARD_SEQ = #{boardSeq}
+          AND USER_SEQ = #{userSeq}
+    </select>
+
+    <insert id="insertBoardLike" parameterType="Map">
+        INSERT INTO HEART (
+            HEART_YN
+            ,BOARD_SEQ
+            ,USER_SEQ
+        ) VALUE (
+            1
+            ,#{boardSeq}
+            ,#{userSeq}
+        )
+    </insert>
+
+    <delete id="deleteBoardLike" parameterType="Map">
+        DELETE FROM HEART
+        WHERE BOARD_SEQ = #{boardSeq}
+          AND USER_SEQ = #{userSeq}
+    </delete>
+
 </mapper>

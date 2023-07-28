@@ -199,7 +199,7 @@
                         document.getElementById('replyData').innerHTML = '';
 
                         let html = `
-                            <li><a class="icon solid fa-heart">${likeCount}</a></li>
+                            <li><a class="icon solid fa-heart" onclick="likeUpdate()">${likeCount}</a></li>
                             <li><a class="icon solid fa-comment">${res.length}</a></li>`;
                         $('.stats').html(html);
 
@@ -388,6 +388,25 @@
                 }
             }
 
+            function likeUpdate() {
+                $.ajax({
+                    url: '/like/boardUpdate/'+ boradSeq,
+                    type: 'POST',
+                    data : replyParam,
+                    success: function (res) {
+                        console.log(res);
+                        if(res.result === 30000){
+                            alert(res.msg);
+                            location.href = '/user/login?url=' + location.pathname;
+                        } else {
+                            alert(res.msg);
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e)
+                    }
+                });
+            }
 
         </script>
     </th:block>
