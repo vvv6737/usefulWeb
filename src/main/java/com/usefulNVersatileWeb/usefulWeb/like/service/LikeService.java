@@ -32,8 +32,6 @@ public class LikeService {
         param.put("userSeq", userVo.getSeq());
 
         Boolean isLike = likeMapper.isBoardLike(param);
-        System.out.println(isLike);
-
         if(isLike) {
             likeMapper.deleteBoardLike(param);
         } else {
