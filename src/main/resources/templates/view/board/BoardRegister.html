@@ -232,7 +232,7 @@
                                     if(Array.isArray(res[i].REPLAY_CONTENT)) {
                                         let replyArr = '';
                                         for (let j = 0; j < res[i].REPLAY_CONTENT.length; j++) {
-                                            replyArr = '<p>' + res[i].REPLAY_CONTENT[j] + '</p>' + replyArr;
+                                            replyArr = replyArr + '<p>' + res[i].REPLAY_CONTENT[j] + '</p>';
                                         }
                                         $('.replyContent'+i).append(replyArr);
                                     } else {

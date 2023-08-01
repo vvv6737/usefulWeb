@@ -45,7 +45,7 @@ public class RestBoardController {
         return boardService.updateBoard(boardVo, request);
     }
 
-    @GetMapping(value = "/excel", name = "엑셀 테스트")
+    @PostMapping(value = "/excel", name = "엑셀 테스트")
     public void excel(BoardVo boardVo, HttpServletResponse res) throws Exception {
         List<HashMap<String, Object>> list = boardService.boardList(boardVo);
 

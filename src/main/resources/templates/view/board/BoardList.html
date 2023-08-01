@@ -40,7 +40,7 @@
             <ul class="actions">
                 <li><a href="#" class="button small">Prev</a></li>
                 <li><a href="#" class="button small">Next</a></li>
-                <li><a href="/board/excel" class="button small">Board Excel Down</a></li>
+                <li><a class="button small" onclick="boardExcelDown()">Board Excel Down</a></li>
             </ul>
         </section>
 
@@ -52,6 +52,55 @@
                 } else {
                     location.href = '/board/detail/' + obj
                 }
+            }
+
+            function boardExcelDown(){
+                $.ajax({
+                    url: '/board/excel',
+                    data: {},
+                    type: 'POST',
+                    cache: false,
+                    xhrFields: {
+                        responseType: "blob",
+                    },
+                }).done(function (blob, status, xhr) {
+                    //파일이름 체크
+                    var fileName = "";
+                    var disposition = xhr.getResponseHeader("Content-Disposition");
+
+                    if (disposition && disposition.indexOf("attachment") !== -1) {
+                        var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                        var matches = filenameRegex.exec(disposition);
+
+                        if (matches != null && matches[1]) {
+                            fileName = decodeURI(matches[1].replace(/['"]/g, ""));
+                        }
+                    }
+
+                    // for IE
+                    if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+                        window.navigator.msSaveOrOpenBlob(blob, fileName);
+                    } else {
+                        var URL = window.URL || window.webkitURL;
+                        var downloadUrl = URL.createObjectURL(blob);
+
+                        if (fileName) {
+                            var a = document.createElement("a");
+
+                            // for safari
+                            if (a.download === undefined) {
+                                window.location.href = downloadUrl;
+                            } else {
+                                a.href = downloadUrl;
+                                a.download = fileName;
+                                document.body.appendChild(a);
+                                a.click();
+                            }
+                        } else {
+                            window.location.href = downloadUrl;
+                        }
+                    }
+                });
             }
         </script>
     </th:block>
