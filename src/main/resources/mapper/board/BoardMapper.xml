@@ -4,25 +4,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.usefulNVersatileWeb.usefulWeb.board.mapper.BoardMapper">
 
-    <select id="boardList" resultType="map">
-        select
-            b.BOARD_SEQ as boardSeq
-             ,b.TITLE as title
-             ,IFNULL((CASE
-                          WHEN INSTR(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
-                              THEN REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
-                          ELSE REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
-                        END),
-                    (CASE
-                          WHEN INSTR(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM') > 0
-                              THEN REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'PM', '오후')
-                          ELSE REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%m-%d %p %h:%i'), 'AM', '오전')
-                    END)) as uploadDate
-             ,u.USER_ID as userId
-        from BOARD b
-        left join user u
-        on b.USER_SEQ = u.USER_SEQ
-        order by FIRST_UPDATE desc
+    <select id="boardList" parameterType="com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo" resultType="map">
+        SELECT
+            B.BOARD_SEQ AS boardSeq
+            ,B.TITLE AS title
+            ,IFNULL((CASE
+                          WHEN INSTR(DATE_FORMAT(B.LAST_UPDATE, '%Y-%M-%D %P %H:%I'), 'PM') > 0
+                              THEN REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%M-%D %P %H:%I'), 'PM', '오후')
+                          ELSE REPLACE(DATE_FORMAT(B.LAST_UPDATE, '%Y-%M-%D %P %H:%I'), 'AM', '오전')
+                    END),
+                     (CASE
+                          WHEN INSTR(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%M-%D %P %H:%I'), 'PM') > 0
+                              THEN REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%M-%D %P %H:%I'), 'PM', '오후')
+                          ELSE REPLACE(DATE_FORMAT(B.FIRST_UPDATE, '%Y-%M-%D %P %H:%I'), 'AM', '오전')
+                         END)) AS uploadDate
+            ,U.USER_ID AS userId
+        FROM BOARD B
+            LEFT JOIN USER U
+            ON B.USER_SEQ = U.USER_SEQ
+        ORDER BY FIRST_UPDATE DESC
+        LIMIT #{pageNum}, #{pageSize}
     </select>
 
     <!--게시글 첫 등록-->

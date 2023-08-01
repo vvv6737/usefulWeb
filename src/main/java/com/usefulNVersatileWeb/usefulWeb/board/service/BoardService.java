@@ -21,6 +21,12 @@ public class BoardService {
     BoardMapper boardMapper;
 
     public List<HashMap<String, Object>> boardList(BoardVo boardVo) throws Exception {
+        System.out.println(boardVo);
+
+        int pageNum = boardVo.getPageNum();
+        pageNum = pageNum == 0 ? 1 : pageNum;
+        boardVo.setPageNum((pageNum - 1) * 10);
+        boardVo.setPageSize(10);
         return boardMapper.boardList(boardVo);
     }
 

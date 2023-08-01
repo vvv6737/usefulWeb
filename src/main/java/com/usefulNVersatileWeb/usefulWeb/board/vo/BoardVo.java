@@ -15,5 +15,8 @@ public class BoardVo {
     private String lastUpdate;
     private String ip;
 
+    private int pageNum;
+    private int pageSize;
+
     private File imgFile;
 }
