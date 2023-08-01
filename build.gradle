@@ -45,6 +45,8 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
 }
 
 tasks.named('test') {
