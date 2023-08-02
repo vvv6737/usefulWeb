@@ -21,13 +21,25 @@ public class BoardService {
     BoardMapper boardMapper;
 
     public List<HashMap<String, Object>> boardList(BoardVo boardVo) throws Exception {
-        System.out.println(boardVo);
-
-        int pageNum = boardVo.getPageNum();
-        pageNum = pageNum == 0 ? 1 : pageNum;
-        boardVo.setPageNum((pageNum - 1) * 10);
-        boardVo.setPageSize(10);
         return boardMapper.boardList(boardVo);
+    }
+
+    public int[] boardListPaging(BoardVo boardVo) throws Exception {
+        int[] paging;
+        int itemsInAPage = boardVo.getPageSize();
+        int totalCount = boardMapper.boardListCount(boardVo); //db 등에서 전체 게시물 카운트해서 값 가져오기.
+        int totalPage = (int) Math.ceil(totalCount / (double) itemsInAPage);
+
+        if(totalPage == 0) {
+            paging = new int[0];
+            paging[0] = 1;
+        } else {
+            paging = new int[totalPage];
+            for (int i = 1; i <= totalPage; i++) {
+                paging[i-1] = i;
+            }
+        }
+        return paging;
     }
 
     public HashMap<String, Object> addBoard(BoardVo boardVo, HttpServletRequest request) throws Exception {

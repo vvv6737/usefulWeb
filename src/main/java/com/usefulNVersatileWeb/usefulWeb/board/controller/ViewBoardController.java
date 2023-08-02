@@ -29,7 +29,16 @@ public class ViewBoardController {
 
     @GetMapping(value = "/list", name = "게시판 목록")
     public String mainView(Model model, BoardVo boardVo, HttpServletRequest request) throws Exception {
+
+        if (boardVo.getPageSize() == 0) {
+            boardVo.setPageSize(10);
+        }
+        int pageNum = boardVo.getPageNum();
+        pageNum = pageNum == 0 ? 1 : pageNum;
+        boardVo.setPageNum((pageNum - 1) * boardVo.getPageSize());
+
         model.addAttribute("boardList", boardService.boardList(boardVo));
+        model.addAttribute("paging", boardService.boardListPaging(boardVo));
         return UrlUtil.url("board/BoardList", request);
     }
 

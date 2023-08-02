@@ -12,6 +12,9 @@ public interface BoardMapper {
     //게시글 리스트
     List<HashMap<String, Object>> boardList(BoardVo boardVo) throws Exception;
 
+    //게시글 전체수
+    int boardListCount(BoardVo boardVo);
+
     //게시글 추가
     int addBoard(BoardVo boardVo) throws Exception;
 

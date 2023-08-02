@@ -38,13 +38,24 @@
             </div>
 
             <ul class="actions">
-                <li><a href="#" class="button small">Prev</a></li>
-                <li><a href="#" class="button small">Next</a></li>
+                <li>
+                    <a class="button small" id="pagePrevBtn" onclick="pagePrevBtn()">Prev</a>
+                </li>
+                <li th:each="p : ${paging}">
+                    <a th:href="${'?pageNum=' + p}" class="button small" th:text="${p}"></a>
+                </li>
+                <li>
+                    <a class="button small" id="pageNextBtn" onclick="pageNextBtn()">Next</a>
+                </li>
                 <li><a class="button small" onclick="boardExcelDown()">Board Excel Down</a></li>
             </ul>
         </section>
 
         <script>
+            $(document).ready(function () {
+                pagingBtnView()
+            })
+
             function boardDetail(obj) {
                 if(obj === '' || obj === null) {
                     alert('상세보기 오류')
@@ -101,6 +112,24 @@
                         }
                     }
                 });
+            }
+
+            let pageNum = location.search === '' ? 1 : parseInt(location.search.split('=')[1]);
+            let pagingSize = [[${paging.length}]];
+
+
+            function pagingBtnView() {
+                if(pageNum === 1)
+                    $('#pagePrevBtn').addClass('disabled')
+
+                if(pagingSize === pageNum)
+                    $('#pageNextBtn').addClass('disabled')
+            }
+            function pagePrevBtn() {
+                location.href = '?pageNum=' + (pageNum - 1)
+            }
+            function pageNextBtn() {
+                location.href = '?pageNum=' + (pageNum + 1)
             }
         </script>
     </th:block>
