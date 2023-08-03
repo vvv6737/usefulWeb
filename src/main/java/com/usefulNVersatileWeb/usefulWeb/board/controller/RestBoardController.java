@@ -2,28 +2,21 @@ package com.usefulNVersatileWeb.usefulWeb.board.controller;
 
 import com.usefulNVersatileWeb.usefulWeb.board.service.BoardService;
 import com.usefulNVersatileWeb.usefulWeb.board.vo.BoardVo;
-import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
-import com.usefulNVersatileWeb.usefulWeb.util.IpUtil;
-import com.usefulNVersatileWeb.usefulWeb.util.ResponseUtil;
-import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
