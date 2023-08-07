@@ -16,13 +16,19 @@
                         <textarea name="content" placeholder="Content" rows="6" th:text="${result.get('CONTENT')}"></textarea>
                     </div>
 
-                    <input type="file">
-                    <ul class="actions">
-                        <li><a href="#" class="button icon solid fa-upload">fileUpload</a></li>
-                        <li>filename.jpg</li>
-                    </ul>
+                    <div class="col-7 col-12-xsmall">
+                        <input type="file" id="fileBtn" name="imgFile" onchange="readFile(this)" hidden>
+                        <ul class="actions">
+                            <li><a href="#" class="button icon solid fa-upload" onclick="document.getElementById('fileBtn').click()">fileUpload</a></li>
+                            <li id="previewFileName">filename.jpg</li>
+                        </ul>
+                    </div>
 
-                    <section>
+                    <div class="col-5 col-12-xsmall" style="text-align: center;">
+                        <img id="imgPreview" src="/mainAssist/images/no_user_img.png" alt="예시 사진">
+                    </div>
+
+                    <!--<section>
                         <h3>Image</h3>
                         <h4>Fit</h4>
                         <div class="box alt">
@@ -104,7 +110,7 @@
                             faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum
                             ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
                             accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-                    </section>
+                    </section>-->
 
                     <!--&lt;!&ndash;입력부&ndash;&gt;
                     &lt;!&ndash;<div class="col-12">
@@ -300,11 +306,18 @@
             }
 
             function register() {
-                const data = $('#boardRegister').serialize();
+                let myForm = document.getElementById("boardRegister");
+                let formData = new FormData(myForm);
+
+                console.log(formDataConsole(formData));
+                return;
+
                 $.ajax({
                     url: '/board/addBoard',
                     type: 'POST',
-                    data: data,
+                    data: formData,
+                    processData: false,
+                    contentType: false,
                     success: successResult,
                     error: errorResult
                 });
@@ -450,6 +463,18 @@
                 });
             }
 
+            function readFile(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('imgPreview').src = e.target.result;
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    document.getElementById('previewFileName').textContent = input.files[0].name
+                } else {
+                    document.getElementById('imgPreview').src = "";
+                }
+            }
         </script>
     </th:block>
 </html>

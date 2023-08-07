@@ -11,9 +11,8 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,8 +28,8 @@ public class RestBoardController {
     BoardService boardService;
 
     @PostMapping(value = "/addBoard", name = "게시판 등록 API")
-    public HashMap<String, Object> registerView(BoardVo boardVo, HttpServletRequest request) throws Exception {
-        return boardService.addBoard(boardVo, request);
+    public HashMap<String, Object> registerView(@RequestPart MultipartFile imgFile, HttpServletRequest request) throws Exception {
+        return boardService.addBoard(imgFile, request);
     }
 
     @PostMapping(value = "/updateBoard", name = "게시판 수정 API")

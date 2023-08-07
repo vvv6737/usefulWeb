@@ -8,6 +8,9 @@ import com.usefulNVersatileWeb.usefulWeb.util.ResponseUtil;
 import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -42,22 +45,35 @@ public class BoardService {
         return paging;
     }
 
-    public HashMap<String, Object> addBoard(BoardVo boardVo, HttpServletRequest request) throws Exception {
+    public HashMap<String, Object> addBoard(MultipartFile imgFile, HttpServletRequest request) throws Exception {
         UserVo userVo = SessionUtil.getUser(request);
         if(userVo == null) {
             return ResponseUtil.failResponse(0, "세션이 종료되었습니다. 다시 로그인하여 작성해주세요.");
         }
-        // ip 저장
+
+        BoardVo boardVo = new BoardVo();
+        // ip 저장, 유저 시퀀스 저장, 게시글 제목 저장, 내용 저장
         String getIp = IpUtil.ipView(request);
         boardVo.setIp(getIp);
-        //유저 시퀀스 저장
         boardVo.setUserSeq(userVo.getSeq());
+        boardVo.setTitle(request.getParameter("title"));
+        boardVo.setContent(request.getParameter("content"));
 
-        int resultInt = boardMapper.addBoard(boardVo);
-        if (resultInt <= 0) {
-            return ResponseUtil.failResponse(0, "게시글이 처리되지 않았습니다.");
-        }
-        return ResponseUtil.successResponse("게시글이 처리되었습니다.");
+        ResponseUtil.IsLoc();
+
+        System.out.println(imgFile);
+
+
+
+
+
+        return null;
+
+//        int resultInt = boardMapper.addBoard(boardVo);
+//        if (resultInt <= 0) {
+//            return ResponseUtil.failResponse(0, "게시글이 처리되지 않았습니다.");
+//        }
+//        return ResponseUtil.successResponse("게시글이 처리되었습니다.");
     }
 
     public HashMap<String, Object> boardDetail(int seq) {

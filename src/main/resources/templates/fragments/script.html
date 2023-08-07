@@ -143,6 +143,18 @@
                     return false; // 스페이스 없는 경우
                 }
             }
+
+            function formDataConsole(formData){
+                // FormData의 key 확인
+                for (let key of formData.keys()) {
+                    console.log("key : " + key);
+                }
+
+                // FormData의 value 확인
+                for (let value of formData.values()) {
+                    console.log(value);
+                }
+            }
         </script>
     </th:block>
 </html>

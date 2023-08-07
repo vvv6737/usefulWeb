@@ -9,7 +9,6 @@ public class BoardVo {
     private int seq;
     private int userSeq;
     private String title;
-    private String imgFileName;
     private String content;
     private String firstUpdate;
     private String lastUpdate;
@@ -19,4 +18,6 @@ public class BoardVo {
     private int pageSize;
 
     private File imgFile;
+    private String imgRoute;
+    private String imgFileName;
 }
