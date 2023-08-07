@@ -309,9 +309,6 @@
                 let myForm = document.getElementById("boardRegister");
                 let formData = new FormData(myForm);
 
-                console.log(formDataConsole(formData));
-                return;
-
                 $.ajax({
                     url: '/board/addBoard',
                     type: 'POST',
@@ -398,6 +395,7 @@
                             } else if (res.result === 11000){
                                 alert('댓글 적용 완료!');
                                 showReply();
+                                document.getElementById('replyContent').value = '';
                             }
                         },
                         error: function (e) {
@@ -453,7 +451,6 @@
                             alert(res.msg);
                             location.href = '/user/login?url=' + location.pathname;
                         } else {
-                            alert(res.msg);
                             showReply();
                         }
                     },

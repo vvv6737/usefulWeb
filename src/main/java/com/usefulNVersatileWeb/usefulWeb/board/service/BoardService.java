@@ -52,28 +52,23 @@ public class BoardService {
         }
 
         BoardVo boardVo = new BoardVo();
-        // ip 저장, 유저 시퀀스 저장, 게시글 제목 저장, 내용 저장
+        // ip 저장, 유저 시퀀스 저장, 게시글 제목 저장, 내용 저장, 이미지 있을경우 이미지 저장
         String getIp = IpUtil.ipView(request);
         boardVo.setIp(getIp);
         boardVo.setUserSeq(userVo.getSeq());
         boardVo.setTitle(request.getParameter("title"));
         boardVo.setContent(request.getParameter("content"));
 
-        ResponseUtil.IsLoc();
+        //업로드할 파일이 있는경우
+        if(!imgFile.isEmpty()) {
+            ResponseUtil.IsLoc();
+        }
 
-        System.out.println(imgFile);
-
-
-
-
-
-        return null;
-
-//        int resultInt = boardMapper.addBoard(boardVo);
-//        if (resultInt <= 0) {
-//            return ResponseUtil.failResponse(0, "게시글이 처리되지 않았습니다.");
-//        }
-//        return ResponseUtil.successResponse("게시글이 처리되었습니다.");
+        int resultInt = boardMapper.addBoard(boardVo);
+        if (resultInt <= 0) {
+            return ResponseUtil.failResponse(0, "게시글이 처리되지 않았습니다.");
+        }
+        return ResponseUtil.successResponse("게시글이 처리되었습니다.");
     }
 
     public HashMap<String, Object> boardDetail(int seq) {
