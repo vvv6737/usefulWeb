@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -59,9 +61,23 @@ public class BoardService {
         boardVo.setTitle(request.getParameter("title"));
         boardVo.setContent(request.getParameter("content"));
 
+        System.out.println("getSize : " + imgFile.getSize());
+
+
+
         //업로드할 파일이 있는경우
         if(!imgFile.isEmpty()) {
             ResponseUtil.IsLoc();
+
+            // 현재 시간
+            LocalTime now = LocalTime.now();
+            // 포맷 정의하기
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH_mm_ss");
+            // 포맷 적용하기
+            String formatedNow = now.format(formatter);
+
+            String fileName = "boardImg_" + formatedNow + ".jpg";
+            System.out.println(fileName);
         }
 
         int resultInt = boardMapper.addBoard(boardVo);
