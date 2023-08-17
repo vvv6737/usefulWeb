@@ -6,6 +6,7 @@ import com.usefulNVersatileWeb.usefulWeb.user.vo.UserVo;
 import com.usefulNVersatileWeb.usefulWeb.util.IpUtil;
 import com.usefulNVersatileWeb.usefulWeb.util.ResponseUtil;
 import com.usefulNVersatileWeb.usefulWeb.util.SessionUtil;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -61,14 +63,8 @@ public class BoardService {
         boardVo.setTitle(request.getParameter("title"));
         boardVo.setContent(request.getParameter("content"));
 
-        System.out.println("getSize : " + imgFile.getSize());
-
-
-
         //업로드할 파일이 있는경우
         if(!imgFile.isEmpty()) {
-            ResponseUtil.IsLoc();
-
             // 현재 시간
             LocalTime now = LocalTime.now();
             // 포맷 정의하기
@@ -76,8 +72,21 @@ public class BoardService {
             // 포맷 적용하기
             String formatedNow = now.format(formatter);
 
-            String fileName = "boardImg_" + formatedNow + ".jpg";
-            System.out.println(fileName);
+            String ProductimageOriName = imgFile.getOriginalFilename();
+            String fileNameExtension = FilenameUtils.getExtension(ProductimageOriName).toLowerCase();
+
+            File destinationFile;
+            String fileName;
+            do {
+                fileName = "boardImg_" + formatedNow + "." + fileNameExtension;
+                destinationFile = new File(ResponseUtil.IsLoc() + fileName);
+            } while (destinationFile.exists());
+            destinationFile.getParentFile().mkdirs();
+            imgFile.transferTo(destinationFile);
+
+            // 파일정보, 경로 저장
+            boardVo.setFileName(fileName);
+            boardVo.setFilePath(ResponseUtil.IsLoc());
         }
 
         int resultInt = boardMapper.addBoard(boardVo);

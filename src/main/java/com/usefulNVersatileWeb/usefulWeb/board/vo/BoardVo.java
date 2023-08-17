@@ -18,6 +18,6 @@ public class BoardVo {
     private int pageSize;
 
     private File imgFile;
-    private String imgRoute;
-    private String imgFileName;
+    private String fileName;
+    private String filePath;
 }

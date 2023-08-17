@@ -41,13 +41,17 @@
         , `TITLE`
         , `CONTENT`
         , `FIRST_UPDATE`
-        , `IP`)
+        , `IP`
+        , `FILE_NAME`
+        , `FILE_PATH`)
         VALUES
         (#{userSeq}
         , #{title}
         , #{content}
         , now()
         , #{ip}
+        , #{fileName}
+        , #{filePath}
         )
     </insert>
 

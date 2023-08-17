@@ -25,7 +25,7 @@ public class ResponseUtil {
         String currentPath = System.getProperty("user.dir");
         String resPath;
         if(currentPath.contains("hoon")) {
-            resPath = currentPath + "/../../../Downloads/img";
+            resPath = currentPath + "/../../../Downloads/img/";
         } else {
             resPath = "";
         }
