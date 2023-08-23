@@ -179,8 +179,8 @@
             </div>
         </header>
         <span class="image featured boardDetail" style="display: none;">
-            <img th:if="${result.get('FILE_NAME') != null}" th:src="@{result.get('FILE_PATH') + result.get('FILE_NAME')}" th:alt="${result.get('FILE_NAME')}"/>
-            <img th:if="${result.get('FILE_NAME') == null}" th:src="@{/mainAssist/images/pic01.jpg}" alt="이미지 없음"/>
+            <img th:if="${result.get('FILE_NAME') != null}" th:src="@{result.get('FILE_PATH') + result.get('FILE_NAME')}" onerror="this.src='/mainAssist/images/no_img_file.png'"  th:alt="${result.get('FILE_NAME')}"/>
+            <!--<img th:if="${result.get('FILE_NAME') == null}" th:src="@{/mainAssist/images/pic01.jpg}" alt="이미지 없음"/>-->
         </span>
         <!--내용 줄바꿈이 있는경우-->
         <p class="boardDetail" th:if="${result.get('contentArr') == null}" th:text="${result.get('CONTENT')}"></p>
